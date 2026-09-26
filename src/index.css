@@ -1,0 +1,474 @@
+:root {
+  --white: #f4f6fb;
+  --silver: #c9d2e4;
+  --pearl: #e8ecf5;
+  --ice: #a9c4e8;
+  --glow-blue: rgba(140, 175, 235, 0.55);
+  --glow-violet: rgba(160, 150, 235, 0.4);
+  --glass: rgba(255, 255, 255, 0.07);
+  --glass-strong: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.28);
+  --ink: #0b0f1c;
+  --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-body: 'Manrope', 'Segoe UI', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--white);
+  background: var(--ink);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- shared page shell ---------- */
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: hidden;
+  animation: page-in 0.9s ease both;
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.page-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  animation: bg-drift 40s ease-in-out infinite alternate;
+}
+
+@keyframes bg-drift {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.06);
+  }
+}
+
+.page-veil {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 110%, rgba(8, 10, 22, 0.55), transparent 60%),
+    linear-gradient(180deg, rgba(8, 10, 22, 0.45) 0%, rgba(8, 10, 22, 0.05) 30%, rgba(8, 10, 22, 0.05) 60%, rgba(8, 10, 22, 0.6) 100%);
+  pointer-events: none;
+}
+
+/* ---------- particles ---------- */
+
+.particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--pearl);
+  opacity: 0;
+  box-shadow: 0 0 6px 1px rgba(200, 215, 245, 0.7);
+  animation-name: float-up;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes float-up {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  15% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-90px);
+  }
+}
+
+/* ---------- home ---------- */
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-logo {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 40px;
+}
+
+.logo-mark {
+  font-size: 22px;
+  color: var(--pearl);
+  text-shadow: 0 0 14px var(--glow-blue);
+}
+
+.logo-text {
+  font-family: var(--font-display);
+  font-size: 20px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--pearl);
+}
+
+.home-hero {
+  position: relative;
+  z-index: 2;
+  margin-top: 4vh;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.home-title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(34px, 5vw, 58px);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-shadow: 0 0 30px rgba(120, 160, 230, 0.5);
+}
+
+.home-subtitle {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: var(--silver);
+}
+
+.room-grid {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  padding: 24px 40px 36px;
+}
+
+/* ---------- room buttons ---------- */
+
+.room-button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 22px 12px 20px;
+  border-radius: 18px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  text-decoration: none;
+  color: var(--white);
+  overflow: hidden;
+  transition:
+    transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.45s ease,
+    background 0.45s ease,
+    border-color 0.45s ease;
+}
+
+.room-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at 50% 0%, rgba(170, 195, 245, 0.22), transparent 65%);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.room-button:hover,
+.room-button:focus-visible {
+  transform: translateY(-6px) scale(1.04);
+  background: var(--glass-strong);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 0 28px var(--glow-blue),
+    0 0 60px var(--glow-violet),
+    inset 0 0 18px rgba(200, 220, 255, 0.12);
+  outline: none;
+}
+
+.room-button:hover::before,
+.room-button:focus-visible::before {
+  opacity: 1;
+}
+
+.room-button-glyph {
+  font-size: 26px;
+  line-height: 1;
+  color: var(--pearl);
+  text-shadow: 0 0 12px var(--glow-blue);
+  transition: transform 0.45s ease;
+}
+
+.room-button:hover .room-button-glyph {
+  transform: scale(1.15);
+}
+
+.room-button-name {
+  font-family: var(--font-display);
+  font-size: 17px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.room-button-tagline {
+  font-size: 10.5px;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: var(--silver);
+  text-align: center;
+}
+
+.room-button-desc {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  border-radius: inherit;
+  background: rgba(12, 16, 32, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--pearl);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.room-button:hover .room-button-desc,
+.room-button:focus-visible .room-button-desc {
+  opacity: 1;
+}
+
+/* ---------- room pages ---------- */
+
+.room-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.room-header {
+  position: relative;
+  z-index: 2;
+  padding: 26px 40px 0;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--pearl);
+  font-size: 12.5px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition:
+    background 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+
+.back-button:hover,
+.back-button:focus-visible {
+  background: var(--glass-strong);
+  box-shadow: 0 0 20px var(--glow-blue);
+  transform: translateX(-3px);
+  outline: none;
+}
+
+.room-title {
+  position: absolute;
+  left: 50%;
+  top: 26px;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.room-breadcrumb {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ice);
+}
+
+.room-title h1 {
+  margin-top: 6px;
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(30px, 4vw, 46px);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  text-shadow: 0 0 26px rgba(140, 175, 235, 0.55);
+}
+
+.room-subtitle {
+  margin-top: 4px;
+  font-size: 12.5px;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  color: var(--silver);
+}
+
+.room-description {
+  position: relative;
+  z-index: 2;
+  max-width: 460px;
+  margin: auto 40px 0;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+  color: var(--pearl);
+  text-shadow: 0 1px 12px rgba(6, 8, 18, 0.8);
+}
+
+.room-cards {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 14px;
+  padding: 26px 40px 36px;
+  overflow-x: auto;
+}
+
+.room-card {
+  flex: 1 0 auto;
+  min-width: 150px;
+  padding: 20px 22px;
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  color: var(--white);
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition:
+    transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.4s ease,
+    background 0.4s ease,
+    border-color 0.4s ease;
+}
+
+.room-card:hover,
+.room-card:focus-visible {
+  transform: translateY(-4px);
+  background: var(--glass-strong);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 0 22px var(--glow-blue),
+    inset 0 0 14px rgba(200, 220, 255, 0.1);
+  outline: none;
+}
+
+.room-card-title {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+/* ---------- mobile ---------- */
+
+@media (max-width: 900px) {
+  .home-logo {
+    padding: 20px 22px;
+  }
+
+  .home-hero {
+    margin-top: 2vh;
+    padding: 0 22px;
+  }
+
+  .room-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 18px 22px 26px;
+    margin-top: 3vh;
+  }
+
+  .room-button {
+    padding: 18px 10px 16px;
+  }
+
+  .room-button-desc {
+    display: none;
+  }
+
+  .room-header {
+    padding: 18px 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .room-title {
+    position: static;
+    transform: none;
+    order: -1;
+  }
+
+  .room-description {
+    margin: auto 20px 0;
+    font-size: 13px;
+  }
+
+  .room-cards {
+    padding: 18px 20px 26px;
+    gap: 10px;
+  }
+
+  .room-card {
+    min-width: 130px;
+    padding: 16px 18px;
+  }
+}
