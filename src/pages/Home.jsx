@@ -11,6 +11,7 @@ import { topics, programs, deepFormat } from '../data/content'
 import { astrologyServices } from '../data/products'
 import { STATS, TELEGRAM_URL } from '../data/site'
 import heroBg from '../assets/hero-main.jpg'
+import heroBgMobile from '../assets/hero-main-mobile.jpg'
 import bandBg from '../assets/band-mountains.jpg'
 import quizBg from '../assets/program-venus.jpg'
 import portrait from '../assets/portrait-anna.jpg'
@@ -22,7 +23,10 @@ export default function Home() {
     <>
       {/* ---------- hero ---------- */}
       <section className="hero">
-        <img className="hero-bg" src={heroBg} alt="" />
+        <picture>
+          <source media="(max-width: 760px)" srcSet={heroBgMobile} />
+          <img className="hero-bg" src={heroBg} alt="" />
+        </picture>
         <div className="hero-veil" />
         <Header />
         <div className="container" style={{ position: 'relative', zIndex: 2, flex: 1, display: 'flex' }}>
