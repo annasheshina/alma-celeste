@@ -4,6 +4,7 @@ import SectionTitle from '../components/SectionTitle'
 import Button from '../components/Button'
 import CTASection from '../components/CTASection'
 import { coursePage } from '../data/content'
+import { TELEGRAM_URL } from '../data/site'
 import heroImg from '../assets/program-course.jpg'
 
 export default function AstrologyForYou() {
@@ -19,7 +20,7 @@ export default function AstrologyForYou() {
           Набор на текущий поток открыт
         </p>
         <div className="hero-actions">
-          <Button to="/contact" variant="light">
+          <Button to={TELEGRAM_URL} variant="light">
             Присоединиться к курсу
           </Button>
         </div>
@@ -70,7 +71,7 @@ export default function AstrologyForYou() {
             потока — при записи.
           </p>
           <div style={{ marginTop: 44 }}>
-            <Button to="/contact" variant="dark">
+            <Button to={TELEGRAM_URL} variant="dark">
               Присоединиться к курсу
             </Button>
           </div>

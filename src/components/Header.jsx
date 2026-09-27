@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { NAV_LINKS } from '../data/site'
+import { NAV_LINKS, TELEGRAM_URL } from '../data/site'
 import Sparkle from './Sparkle'
 
 export default function Header() {
@@ -25,9 +25,9 @@ export default function Header() {
           ))}
         </nav>
         <div className="header-actions">
-          <Link to="/contact" className="btn btn-light header-cta">
+          <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" className="btn btn-light header-cta">
             Записаться
-          </Link>
+          </a>
           <button
             className="menu-toggle"
             aria-label="Открыть меню"
@@ -51,9 +51,9 @@ export default function Header() {
               {l.label}
             </Link>
           ))}
-          <Link to="/contact" onClick={() => setOpen(false)}>
+          <a href={TELEGRAM_URL} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>
             Записаться
-          </Link>
+          </a>
         </div>
       )}
     </>

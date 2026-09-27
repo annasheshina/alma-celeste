@@ -5,6 +5,7 @@ import Button from '../components/Button'
 import CTASection from '../components/CTASection'
 import ReviewCard from '../components/ReviewCard'
 import { venusPage } from '../data/content'
+import { TELEGRAM_URL } from '../data/site'
 import { reviews } from '../data/reviews'
 import heroImg from '../assets/program-venus.jpg'
 
@@ -20,7 +21,7 @@ export default function Venus() {
         subtitle={venusPage.heroSub}
       >
         <div className="hero-actions">
-          <Button to="/contact" variant="light">
+          <Button to={TELEGRAM_URL} variant="light">
             Предзаписаться
           </Button>
         </div>
@@ -109,7 +110,7 @@ export default function Venus() {
             ))}
           </div>
           <div style={{ marginTop: 44 }}>
-            <Button to="/contact" variant="dark">
+            <Button to={TELEGRAM_URL} variant="dark">
               Предзаписаться
             </Button>
           </div>

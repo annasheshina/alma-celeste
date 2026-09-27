@@ -1,4 +1,5 @@
 import Button from './Button'
+import { TELEGRAM_URL } from '../data/site'
 
 export default function ProductCard({ product, ctaLabel = 'Записаться' }) {
   return (
@@ -19,7 +20,7 @@ export default function ProductCard({ product, ctaLabel = 'Записаться'
             ))}
           </ul>
         </div>
-        <Button to="/contact" variant="dark">
+        <Button to={TELEGRAM_URL} variant="dark">
           {ctaLabel}
         </Button>
       </div>

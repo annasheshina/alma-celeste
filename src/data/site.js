@@ -11,9 +11,11 @@ export const FOOTER_LINKS = [
   { to: '/contact', label: 'Контакты' },
 ]
 
+export const TELEGRAM_URL = 'https://t.me/anna_izumova'
+
 export const SOCIALS = [
   { id: 'instagram', label: 'Instagram', url: 'https://instagram.com/' },
-  { id: 'telegram', label: 'Telegram', url: 'https://t.me/' },
+  { id: 'telegram', label: 'Telegram', url: TELEGRAM_URL },
   { id: 'youtube', label: 'YouTube', url: 'https://youtube.com/' },
 ]
 

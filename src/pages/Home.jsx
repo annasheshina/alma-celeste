@@ -9,7 +9,7 @@ import ReviewsBlock from '../components/ReviewsBlock'
 import CTASection from '../components/CTASection'
 import { topics, programs, deepFormat } from '../data/content'
 import { astrologyServices } from '../data/products'
-import { STATS } from '../data/site'
+import { STATS, TELEGRAM_URL } from '../data/site'
 import heroBg from '../assets/hero-main.jpg'
 import bandBg from '../assets/band-mountains.jpg'
 import quizBg from '../assets/program-venus.jpg'
@@ -39,7 +39,7 @@ export default function Home() {
               Астролог, психолог и проводник в глубокую работу с собой.
             </p>
             <div className="hero-actions">
-              <Button to="/contact" variant="light">
+              <Button to={TELEGRAM_URL} variant="light">
                 Выбрать формат работы
               </Button>
               <Button to="/programs" variant="ghost">
@@ -80,7 +80,7 @@ export default function Home() {
               <p className="quiz-text">
                 Пройдите короткий опрос — я помогу определить подходящий формат.
               </p>
-              <Button to="/contact" variant="dark">
+              <Button to={TELEGRAM_URL} variant="dark">
                 Подобрать формат
               </Button>
             </div>
