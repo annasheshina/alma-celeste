@@ -1,24 +1,37 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
-import Moon from './pages/Moon'
-import Venus from './pages/Venus'
-import Sun from './pages/Sun'
-import Abundance from './pages/Abundance'
 import Astrology from './pages/Astrology'
-import Pleiades from './pages/Pleiades'
+import NatalChart from './pages/NatalChart'
+import Forecast from './pages/Forecast'
+import Consultation from './pages/Consultation'
+import Programs from './pages/Programs'
+import Venus from './pages/Venus'
+import AstrologyForYou from './pages/AstrologyForYou'
+import PersonalWork from './pages/PersonalWork'
+import About from './pages/About'
+import Reviews from './pages/Reviews'
+import Contact from './pages/Contact'
+import NotFound from './pages/NotFound'
 
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/moon" element={<Moon />} />
-        <Route path="/venus" element={<Venus />} />
-        <Route path="/sun" element={<Sun />} />
-        <Route path="/abundance" element={<Abundance />} />
         <Route path="/astrology" element={<Astrology />} />
-        <Route path="/pleiades" element={<Pleiades />} />
-        <Route path="*" element={<Home />} />
+        <Route path="/natal-chart" element={<NatalChart />} />
+        <Route path="/forecast" element={<Forecast />} />
+        <Route path="/consultation" element={<Consultation />} />
+        <Route path="/programs" element={<Programs />} />
+        <Route path="/venus" element={<Venus />} />
+        <Route path="/astrology-for-yourself" element={<AstrologyForYou />} />
+        <Route path="/personal-work" element={<PersonalWork />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/reviews" element={<Reviews />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )
