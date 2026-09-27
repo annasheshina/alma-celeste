@@ -1,0 +1,26 @@
+import ctaBg from '../assets/cta-finale.jpg'
+import Button from './Button'
+
+export default function CTASection({
+  index = '06',
+  title = 'Готовы сделать следующий шаг?',
+  text = 'Расскажите, что сейчас происходит в вашей жизни — я помогу определить подходящий формат работы.',
+  cta = 'Подобрать формат',
+}) {
+  return (
+    <section className="cta-section band">
+      <img className="band-bg" src={ctaBg} alt="" />
+      <div className="band-veil" />
+      <div className="container">
+        <div className="cta-inner">
+          <span className="section-index">{index}</span>
+          <h2 className="cta-title display">{title}</h2>
+          <p className="cta-text">{text}</p>
+          <Button to="/contact" variant="light">
+            {cta}
+          </Button>
+        </div>
+      </div>
+    </section>
+  )
+}

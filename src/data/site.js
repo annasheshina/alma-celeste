@@ -1,0 +1,24 @@
+export const NAV_LINKS = [
+  { to: '/astrology', label: 'Астрология' },
+  { to: '/programs', label: 'Программы' },
+  { to: '/personal-work', label: 'Личная работа' },
+  { to: '/about', label: 'Обо мне' },
+  { to: '/reviews', label: 'Отзывы' },
+]
+
+export const FOOTER_LINKS = [
+  ...NAV_LINKS,
+  { to: '/contact', label: 'Контакты' },
+]
+
+export const SOCIALS = [
+  { id: 'instagram', label: 'Instagram', url: 'https://instagram.com/' },
+  { id: 'telegram', label: 'Telegram', url: 'https://t.me/' },
+  { id: 'youtube', label: 'YouTube', url: 'https://youtube.com/' },
+]
+
+export const STATS = [
+  { value: '3+', label: 'года практики' },
+  { value: '200+', label: 'клиентов' },
+  { value: '7 000', label: 'в блоге' },
+]
