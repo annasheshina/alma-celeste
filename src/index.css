@@ -1346,6 +1346,261 @@ a {
   text-align: center;
 }
 
+/* ---------- natal chart: intro ---------- */
+
+.natal-intro-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.natal-ornament {
+  display: inline-flex;
+  width: 26px;
+  height: 26px;
+  color: var(--gold);
+  margin-bottom: 30px;
+}
+
+.natal-intro-title {
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.16;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.natal-intro-text {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto 14px;
+}
+
+/* ---------- natal chart: guide products ---------- */
+
+.guide-product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+  padding: 72px 0;
+}
+
+.guide-product + .guide-product {
+  border-top: 1px solid var(--line);
+}
+
+.guide-product--rev .guide-info {
+  order: 2;
+}
+
+.guide-product--rev .guide-visual {
+  order: 1;
+}
+
+.guide-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 26px;
+}
+
+.guide-index {
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  color: var(--muted);
+}
+
+.guide-glyph {
+  font-size: 30px;
+  line-height: 1;
+  color: var(--gold);
+}
+
+.guide-title {
+  font-size: clamp(40px, 4.6vw, 60px);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+
+.guide-tagline {
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--ink);
+  white-space: pre-line;
+  margin-bottom: 22px;
+}
+
+.guide-desc {
+  color: var(--muted);
+  font-size: 15.5px;
+  line-height: 1.75;
+  max-width: 460px;
+  white-space: pre-line;
+  margin-bottom: 26px;
+}
+
+.guide-includes-label {
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.guide-product .check-list {
+  margin-bottom: 34px;
+}
+
+.guide-buy {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.guide-price {
+  font-family: var(--font-display);
+  font-size: 30px;
+  color: var(--ink);
+}
+
+.guide-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.guide-journal {
+  width: 100%;
+  max-width: 560px;
+  border-radius: 4px;
+  box-shadow:
+    0 1px 2px rgba(34, 28, 21, 0.05),
+    0 18px 44px -14px rgba(34, 28, 21, 0.28),
+    0 44px 80px -40px rgba(34, 28, 21, 0.22);
+  transform: rotate(-0.6deg);
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.guide-product--rev .guide-journal {
+  transform: rotate(0.6deg);
+}
+
+.guide-journal:hover {
+  transform: rotate(0deg) translateY(-8px);
+  box-shadow:
+    0 2px 3px rgba(34, 28, 21, 0.05),
+    0 26px 56px -14px rgba(34, 28, 21, 0.3),
+    0 60px 100px -44px rgba(34, 28, 21, 0.24);
+}
+
+/* ---------- natal chart: process ---------- */
+
+.guide-steps {
+  display: flex;
+  align-items: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.guide-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  position: relative;
+  padding: 0 8px;
+}
+
+.guide-step-ico {
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.guide-step-ico svg {
+  width: 24px;
+  height: 24px;
+}
+
+.guide-step-num {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--muted);
+}
+
+.guide-step-title {
+  font-family: var(--font-display);
+  font-size: 16.5px;
+  line-height: 1.3;
+  color: var(--ink);
+  max-width: 170px;
+}
+
+.guide-step-sub {
+  font-size: 12.5px;
+  color: var(--muted);
+  max-width: 170px;
+}
+
+.guide-step-arrow {
+  position: absolute;
+  top: 26px;
+  right: -14px;
+  color: var(--gold);
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+/* ---------- natal chart: final text blocks ---------- */
+
+.natal-final {
+  padding-bottom: 110px;
+}
+
+.natal-final-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  border-top: 1px solid var(--line);
+  padding-top: 84px;
+}
+
+.final-block {
+  max-width: 480px;
+}
+
+.final-title {
+  font-size: clamp(26px, 2.6vw, 34px);
+  font-weight: 500;
+  line-height: 1.22;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.final-text {
+  color: var(--muted);
+  font-size: 15.5px;
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+
 /* ---------- responsive ---------- */
 
 @media (max-width: 1100px) {
@@ -1371,6 +1626,26 @@ a {
 
   .reviews-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .guide-product {
+    gap: 44px;
+    padding: 56px 0;
+  }
+
+  .guide-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px 12px;
+  }
+
+  .guide-step-arrow {
+    display: none;
+  }
+
+  .natal-final-grid {
+    gap: 48px;
+    padding-top: 60px;
   }
 }
 
@@ -1448,5 +1723,43 @@ a {
 
   .step-item {
     gap: 18px;
+  }
+
+  /* natal chart page */
+  .guide-product,
+  .natal-final-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-info,
+  .guide-product--rev .guide-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    order: 1;
+  }
+
+  .guide-visual,
+  .guide-product--rev .guide-visual {
+    order: 2;
+  }
+
+  .guide-steps {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 16px;
+  }
+
+  .guide-step {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .guide-step-title,
+  .guide-step-sub {
+    max-width: none;
+  }
+
+  .natal-final {
+    padding-bottom: 80px;
   }
 }
