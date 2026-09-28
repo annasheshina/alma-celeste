@@ -1,8 +1,8 @@
 import iconMoon from '../assets/icon-moon.jpg'
 import iconStar from '../assets/icon-star.jpg'
 import iconPlanet from '../assets/icon-planet.jpg'
-import guideSunway from '../assets/guide-sunway.jpg'
-import guideVenera from '../assets/guide-venera.jpg'
+import guideSunway from '../assets/guide-sunway.png'
+import guideVenera from '../assets/guide-venera.png'
 
 export const guideJournals = [
   {

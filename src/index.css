@@ -1383,13 +1383,25 @@ a {
 .guide-product {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 72px;
+  gap: 56px;
   align-items: center;
-  padding: 72px 0;
+  padding: 56px 64px;
+  margin-top: 44px;
+  border: 1px solid var(--line);
+  border-radius: 34px;
+  background: var(--cream-2);
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.guide-product + .guide-product {
-  border-top: 1px solid var(--line);
+.guide-product:hover {
+  transform: translateY(-6px);
+  border-color: rgba(169, 140, 102, 0.55);
+  box-shadow:
+    0 4px 6px rgba(34, 28, 21, 0.03),
+    0 28px 60px -18px rgba(34, 28, 21, 0.16);
 }
 
 .guide-product--rev .guide-info {
@@ -1480,25 +1492,18 @@ a {
 .guide-journal {
   width: 100%;
   max-width: 560px;
-  border-radius: 4px;
-  box-shadow:
-    0 1px 2px rgba(34, 28, 21, 0.05),
-    0 18px 44px -14px rgba(34, 28, 21, 0.28),
-    0 44px 80px -40px rgba(34, 28, 21, 0.22);
-  transform: rotate(-0.6deg);
-  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  filter: drop-shadow(0 26px 34px rgba(34, 28, 21, 0.22));
+  transform: rotate(-1.2deg);
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .guide-product--rev .guide-journal {
-  transform: rotate(0.6deg);
+  transform: rotate(1.2deg);
 }
 
-.guide-journal:hover {
-  transform: rotate(0deg) translateY(-8px);
-  box-shadow:
-    0 2px 3px rgba(34, 28, 21, 0.05),
-    0 26px 56px -14px rgba(34, 28, 21, 0.3),
-    0 60px 100px -44px rgba(34, 28, 21, 0.24);
+.guide-product:hover .guide-journal {
+  transform: rotate(0deg) translateY(-10px) scale(1.015);
+  filter: drop-shadow(0 38px 48px rgba(34, 28, 21, 0.26));
 }
 
 /* ---------- natal chart: process ---------- */
@@ -1630,7 +1635,7 @@ a {
 
   .guide-product {
     gap: 44px;
-    padding: 56px 0;
+    padding: 44px 40px;
   }
 
   .guide-steps {
@@ -1729,6 +1734,12 @@ a {
   .guide-product,
   .natal-final-grid {
     grid-template-columns: 1fr;
+  }
+
+  .guide-product {
+    padding: 34px 24px;
+    border-radius: 26px;
+    gap: 30px;
   }
 
   .guide-info,
