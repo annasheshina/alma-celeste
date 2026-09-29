@@ -1692,21 +1692,22 @@ a {
   .hero-veil {
     background: linear-gradient(
       180deg,
-      rgba(28, 22, 16, 0.58) 0%,
-      rgba(28, 22, 16, 0.34) 34%,
-      rgba(28, 22, 16, 0.06) 58%,
-      rgba(28, 22, 16, 0.1) 100%
+      rgba(28, 22, 16, 0.08) 0%,
+      rgba(28, 22, 16, 0) 42%,
+      rgba(28, 22, 16, 0.4) 68%,
+      rgba(28, 22, 16, 0.68) 100%
     );
   }
 
   .hero-content {
-    justify-content: flex-start;
-    padding-top: 92px;
+    justify-content: flex-end;
+    padding-top: 0;
+    padding-bottom: 70px;
     max-width: 400px;
   }
 
   .hero-title {
-    font-size: 36px;
+    font-size: 32px;
     margin-top: 8px;
   }
 
