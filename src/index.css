@@ -1774,3 +1774,206 @@ a {
     padding-bottom: 80px;
   }
 }
+
+/* ---------- forecast page ---------- */
+
+.solar-shows-label {
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 34px 0 18px;
+}
+
+.solar-shows {
+  list-style: none;
+  margin: 0 auto;
+  max-width: 460px;
+  text-align: left;
+  padding: 0;
+}
+
+.solar-shows li {
+  position: relative;
+  padding: 12px 0 12px 30px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-display);
+  font-size: 19px;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.solar-shows li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.solar-shows li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+.guide-product--mini {
+  grid-template-columns: 1fr 1.15fr;
+}
+
+.guide-product--deep .guide-toc {
+  margin-bottom: 34px;
+}
+
+.guide-format {
+  margin-top: 22px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.guide-format::before {
+  content: '';
+  width: 26px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.guide-toc {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.guide-toc li {
+  display: flex;
+  gap: 18px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+
+.guide-toc li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.guide-toc-num {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  padding-top: 4px;
+  flex-shrink: 0;
+}
+
+.guide-toc-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.guide-toc-title {
+  font-family: var(--font-display);
+  font-size: 19px;
+  line-height: 1.3;
+  color: var(--ink);
+}
+
+.guide-toc-text {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.guide-toc--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 36px;
+}
+
+@media (max-width: 1100px) {
+  .guide-product--mini {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-toc--grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* forecast cards: placement */
+
+.guide-product--mini .guide-side,
+.guide-product--deep .guide-visual {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.guide-product--mini .guide-side {
+  align-self: center;
+}
+
+.guide-product .guide-info {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.guide-actions {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: end;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+
+.guide-product .guide-price {
+  display: block;
+  margin: 30px 0 4px;
+}
+
+@media (max-width: 1100px) {
+  .guide-product--mini .guide-info,
+  .guide-product--mini .guide-side,
+  .guide-product--mini .guide-actions {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .guide-product--mini .guide-info {
+    order: 1;
+  }
+
+  .guide-product--mini .guide-side {
+    order: 2;
+  }
+
+  .guide-product--mini .guide-actions {
+    order: 3;
+    align-self: start;
+  }
+}
+
+@media (max-width: 760px) {
+  .guide-product .guide-info,
+  .guide-product .guide-side,
+  .guide-product .guide-visual,
+  .guide-product .guide-actions {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .guide-product .guide-side {
+    order: 2;
+  }
+
+  .guide-product .guide-actions {
+    order: 3;
+    align-self: start;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
