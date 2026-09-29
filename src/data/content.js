@@ -13,6 +13,7 @@ export const topics = [
     caption: 'Натальная карта и индивидуальные гайды',
     image: iconMoon,
     to: '/natal-chart',
+    anchor: 'sec-natal-chart',
   },
   {
     id: '02',
@@ -20,6 +21,7 @@ export const topics = [
     caption: 'Прогноз и соляр',
     image: iconStar,
     to: '/forecast',
+    anchor: 'sec-forecast',
   },
   {
     id: '03',
@@ -27,6 +29,7 @@ export const topics = [
     caption: 'Курс «Венера. Пробуждение женщины»',
     image: iconPlanet,
     to: '/venus',
+    anchor: 'sec-venus',
   },
   {
     id: '04',
@@ -34,6 +37,7 @@ export const topics = [
     caption: 'Курс «Астрология для себя»',
     image: iconCrystal,
     to: '/astrology-for-yourself',
+    anchor: 'sec-astrology-for-yourself',
   },
 ]
 

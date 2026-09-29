@@ -106,7 +106,9 @@ export default function Home() {
           />
           <div className="services-grid">
             {astrologyServices.map((s) => (
-              <ServiceCard key={s.id} service={s} />
+              <div className="scroll-anchor" id={`sec-${s.id}`} key={s.id}>
+                <ServiceCard service={s} />
+              </div>
             ))}
           </div>
         </div>
@@ -122,7 +124,9 @@ export default function Home() {
           />
           <div className="programs-grid">
             {programs.map((p) => (
-              <ProgramCard key={p.id} program={p} />
+              <div className="scroll-anchor" id={`sec-${p.id}`} key={p.id}>
+                <ProgramCard program={p} />
+              </div>
             ))}
           </div>
         </div>
