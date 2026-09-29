@@ -695,6 +695,22 @@ a {
     0 18px 70px rgba(212, 178, 120, 0.4);
 }
 
+.section.is-active .section-title {
+  animation: title-focus 2.4s ease;
+}
+
+@keyframes title-focus {
+  0%,
+  100% {
+    color: inherit;
+    text-shadow: none;
+  }
+  40% {
+    color: var(--gold);
+    text-shadow: 0 0 34px rgba(212, 178, 120, 0.45);
+  }
+}
+
 @keyframes anchor-glow {
   0% {
     box-shadow: 0 0 0 rgba(212, 178, 120, 0);

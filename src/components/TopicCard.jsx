@@ -5,7 +5,7 @@ export function scrollToAnchor(e, anchor) {
   const el = document.getElementById(anchor)
   if (!el) return
   document
-    .querySelectorAll('.scroll-anchor.is-active')
+    .querySelectorAll('.scroll-anchor.is-active, .section.is-active')
     .forEach((x) => x.classList.remove('is-active'))
   el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   el.classList.add('is-active')

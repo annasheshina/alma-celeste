@@ -2,7 +2,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Button from '../components/Button'
 import SectionTitle from '../components/SectionTitle'
-import TopicCard from '../components/TopicCard'
+import TopicCard, { scrollToAnchor } from '../components/TopicCard'
 import ServiceCard from '../components/ServiceCard'
 import ProgramCard from '../components/ProgramCard'
 import ReviewsBlock from '../components/ReviewsBlock'
@@ -43,9 +43,13 @@ export default function Home() {
               Астролог, психолог и проводник в глубокую работу с собой.
             </p>
             <div className="hero-actions">
-              <Button to="/astrology" variant="light">
-                Выбрать формат работы
-              </Button>
+              <a
+                href="#sec-astrology"
+                className="btn btn-light"
+                onClick={(e) => scrollToAnchor(e, 'sec-astrology')}
+              >
+                <span>Выбрать формат работы</span>
+              </a>
               <a href="#programs" className="btn btn-ghost">
                 <span>Посмотреть программы</span>
                 <span aria-hidden="true">→</span>
@@ -94,7 +98,7 @@ export default function Home() {
       </section>
 
       {/* ---------- астрология ---------- */}
-      <section className="section band on-photo">
+      <section className="section band on-photo" id="sec-astrology" style={{ scrollMarginTop: 90 }}>
         <img className="band-bg" src={bandBg} alt="" />
         <div className="band-veil" />
         <div className="container">
