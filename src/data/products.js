@@ -141,13 +141,6 @@ export const forecastSteps = [
   { num: '05', title: 'Твой прогноз', sub: 'guide-журнал + аудио' },
 ]
 
-export const astrologyNav = [
-  { label: 'Понять себя и свои таланты', anchor: 'svc-natal-chart' },
-  { label: 'Увидеть свои возможности', anchor: 'svc-forecast' },
-  { label: 'Изменить отношения с собой и своей женственностью', anchor: 'svc-venus' },
-  { label: 'Научиться астрологии для себя', anchor: 'svc-astrology-for-yourself' },
-]
-
 export const astrologyServices = [
   {
     id: 'natal-chart',
@@ -171,22 +164,6 @@ export const astrologyServices = [
     title: 'Прогноз и соляр',
     text: 'Понять ключевые тенденции периода и увидеть возможности.',
     items: ['Мини-прогноз', 'Полный прогноз на год', 'Солярное описание года', 'Запуск соляра'],
-  },
-  {
-    id: 'venus',
-    to: '/venus',
-    icon: '♀',
-    title: 'Венера. Пробуждение женщины',
-    text: 'Программа о женственности, ценности и любви к себе.',
-    items: ['Личная консультация', 'Именной гайд-журнал', 'Поле женщин до 10 человек', 'Практики и геймификация'],
-  },
-  {
-    id: 'astrology-for-yourself',
-    to: '/astrology-for-yourself',
-    icon: '✧',
-    title: 'Астрология для себя',
-    text: 'Курс, который поможет познать себя и читать свою карту.',
-    items: ['4 недели обучения', 'Астромышление', 'Солнце и Луна в карте', 'Закрытый телеграм-канал'],
   },
   {
     id: 'consultation',
