@@ -20,7 +20,7 @@ export const SOCIALS = [
 ]
 
 export const STATS = [
-  { value: '3+', label: 'года практики' },
+  { value: '4+', label: 'года практики' },
   { value: '200+', label: 'клиентов' },
-  { value: '7 000', label: 'в блоге' },
+  { value: '13 тыс', label: 'подписчиков' },
 ]
