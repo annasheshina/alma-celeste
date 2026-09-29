@@ -46,9 +46,10 @@ export default function Home() {
               <Button to="/astrology" variant="light">
                 Выбрать формат работы
               </Button>
-              <Button to="/programs" variant="ghost">
-                Посмотреть программы
-              </Button>
+              <a href="#programs" className="btn btn-ghost">
+                <span>Посмотреть программы</span>
+                <span aria-hidden="true">→</span>
+              </a>
             </div>
           </div>
         </div>
@@ -112,7 +113,7 @@ export default function Home() {
       </section>
 
       {/* ---------- программы ---------- */}
-      <section className="section">
+      <section className="section" id="programs" style={{ scrollMarginTop: 90 }}>
         <div className="container">
           <SectionTitle
             index="02"
