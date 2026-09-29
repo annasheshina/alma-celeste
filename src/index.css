@@ -1685,8 +1685,33 @@ a {
     margin-bottom: 40px;
   }
 
+  .hero-bg {
+    object-position: 50% 78%;
+  }
+
+  .hero-veil {
+    background: linear-gradient(
+      180deg,
+      rgba(28, 22, 16, 0.58) 0%,
+      rgba(28, 22, 16, 0.34) 34%,
+      rgba(28, 22, 16, 0.06) 58%,
+      rgba(28, 22, 16, 0.1) 100%
+    );
+  }
+
   .hero-content {
-    padding-top: 110px;
+    justify-content: flex-start;
+    padding-top: 130px;
+    max-width: 400px;
+  }
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .hero-vertical {
