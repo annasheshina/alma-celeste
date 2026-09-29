@@ -5,7 +5,6 @@ import CTASection from '../components/CTASection'
 import SectionTitle from '../components/SectionTitle'
 import Button from '../components/Button'
 import { aboutPage as d } from '../data/content'
-import { TELEGRAM_URL } from '../data/site'
 import heroImg from '../assets/band-mountains.jpg'
 import portrait from '../assets/portrait-anna.jpg'
 import progVenus from '../assets/program-venus.jpg'
@@ -245,7 +244,7 @@ export default function About() {
             ))}
           </div>
           <div style={{ marginTop: 34 }}>
-            <Button to={TELEGRAM_URL} variant="dark">
+            <Button to="/#sec-astrology" variant="dark">
               Выбрать формат работы
             </Button>
           </div>

@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Button from '../components/Button'
@@ -19,6 +21,19 @@ import portrait from '../assets/portrait-anna.jpg'
 const TICKER = ['Понять себя', 'Осознанность', 'Свобода', 'Новая версия себя']
 
 export default function Home() {
+  const { hash } = useLocation()
+
+  useEffect(() => {
+    if (!hash) return
+    const el = document.getElementById(hash.slice(1))
+    if (!el) return
+    const t = setTimeout(() => {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      el.classList.add('is-active')
+    }, 150)
+    return () => clearTimeout(t)
+  }, [hash])
+
   return (
     <>
       {/* ---------- hero ---------- */}
