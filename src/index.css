@@ -695,7 +695,8 @@ a {
     0 18px 70px rgba(212, 178, 120, 0.4);
 }
 
-.section.is-active .section-title {
+.section.is-active .section-title,
+.section.is-active .about-title {
   animation: title-focus 2.4s ease;
 }
 

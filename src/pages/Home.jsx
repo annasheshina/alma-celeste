@@ -59,11 +59,11 @@ export default function Home() {
             </p>
             <div className="hero-actions">
               <a
-                href="#sec-astrology"
+                href="#sec-about"
                 className="btn btn-light"
-                onClick={(e) => scrollToAnchor(e, 'sec-astrology')}
+                onClick={(e) => scrollToAnchor(e, 'sec-about')}
               >
-                <span>Выбрать формат работы</span>
+                <span>Обо мне</span>
               </a>
               <a href="#programs" className="btn btn-ghost">
                 <span>Посмотреть программы</span>
@@ -164,7 +164,7 @@ export default function Home() {
       </section>
 
       {/* ---------- обо мне ---------- */}
-      <section className="section">
+      <section className="section" id="sec-about" style={{ scrollMarginTop: 60 }}>
         <div className="container">
           <div className="about-layout">
             <div>
