@@ -43,7 +43,7 @@ export default function Home() {
               Астролог, психолог и проводник в глубокую работу с собой.
             </p>
             <div className="hero-actions">
-              <Button to={TELEGRAM_URL} variant="light">
+              <Button to="/astrology" variant="light">
                 Выбрать формат работы
               </Button>
               <Button to="/programs" variant="ghost">
