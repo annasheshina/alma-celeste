@@ -1311,6 +1311,13 @@ a {
   border-radius: 200px 200px 26px 26px;
 }
 
+.split-art {
+  width: 100%;
+  max-width: 400px;
+  justify-self: center;
+  filter: drop-shadow(0 34px 44px rgba(34, 28, 21, 0.24));
+}
+
 .check-list {
   list-style: none;
   display: flex;
