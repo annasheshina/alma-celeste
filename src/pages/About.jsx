@@ -6,7 +6,8 @@ import SectionTitle from '../components/SectionTitle'
 import Button from '../components/Button'
 import { aboutPage as d } from '../data/content'
 import heroImg from '../assets/band-mountains.jpg'
-import portrait from '../assets/portrait-anna.jpg'
+import portrait from '../assets/anna-2.jpg'
+import portrait2 from '../assets/anna-3.jpg'
 import progVenus from '../assets/program-venus.jpg'
 import progAfy from '../assets/program-course.jpg'
 
@@ -77,7 +78,7 @@ export default function About() {
       <section className="section tight">
         <div className="container">
           <div className="split">
-            <img className="split-photo arch" src={portrait} alt="Анна Изи" />
+            <img className="split-photo arch" src={portrait2} alt="Анна Изи" />
             <div>
               <SectionTitle index="02" title="Мой путь" />
               <h3 className="display about-h3">{d.pathTitle}</h3>
