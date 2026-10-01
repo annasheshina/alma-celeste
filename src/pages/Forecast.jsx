@@ -108,7 +108,7 @@ export default function Forecast() {
               </ol>
             </div>
             <div className="guide-actions">
-              <Button to={TELEGRAM_URL} variant="dark">
+              <Button to={mini.ctaUrl || TELEGRAM_URL} variant="dark">
                 {mini.cta}
               </Button>
               <p className="guide-format">{mini.format}</p>
@@ -146,7 +146,7 @@ export default function Forecast() {
               {deep.bonus && <p className="guide-bonus">{deep.bonus}</p>}
             </div>
             <div className="guide-actions">
-              <Button to={TELEGRAM_URL} variant="dark">
+              <Button to={deep.ctaUrl || TELEGRAM_URL} variant="dark">
                 {deep.cta}
               </Button>
               <p className="guide-format">{deep.format}</p>
