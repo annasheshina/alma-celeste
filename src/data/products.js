@@ -1,5 +1,5 @@
 import guideSunway from '../assets/guide-sunway.png'
-import guideVenera from '../assets/guide-venera-cover.jpg'
+import guideVenera from '../assets/guide-venera.png'
 import guideSolar from '../assets/guide-solar.png'
 
 export const guideJournals = [
