@@ -139,11 +139,11 @@ export default function Forecast() {
                   </li>
                 ))}
               </ol>
-              {deep.bonus && <p className="guide-bonus">{deep.bonus}</p>}
               <span className="guide-price">{deep.price}</span>
             </div>
             <div className="guide-visual">
               <img className="guide-journal" src={deep.image} alt={deep.imageAlt} />
+              {deep.bonus && <p className="guide-bonus">{deep.bonus}</p>}
             </div>
             <div className="guide-actions">
               <Button to={TELEGRAM_URL} variant="dark">
