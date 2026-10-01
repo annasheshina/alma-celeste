@@ -1885,10 +1885,16 @@ a {
 
 .guide-product--deep .guide-visual {
   align-self: stretch;
+  position: relative;
 }
 
-.guide-product--deep .guide-journal {
-  margin-bottom: auto;
+.guide-product--deep .guide-bonus {
+  position: absolute;
+  bottom: 108px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 92%;
 }
 
 /* ---------- natal chart: process ---------- */
