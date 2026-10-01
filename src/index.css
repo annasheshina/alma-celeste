@@ -1828,7 +1828,18 @@ a {
 
 .guide-visual {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  gap: 24px;
+}
+
+.guide-caption {
+  font-size: clamp(21px, 2vw, 27px);
+  line-height: 1.35;
+  color: var(--gold);
+  text-align: center;
+  max-width: 360px;
 }
 
 .guide-journal {

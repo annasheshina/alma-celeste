@@ -65,7 +65,7 @@ export default function NatalChart() {
         </div>
       </section>
 
-      {/* 02–03 — guide-журналы */}
+      {/* 02–03 — гайд-журналы */}
       <section className="section tight" id="guides">
         <div className="container">
           {guideJournals.map((g) => (
@@ -98,18 +98,21 @@ export default function NatalChart() {
               </div>
               <div className="guide-visual">
                 <img className="guide-journal" src={g.image} alt={g.imageAlt} />
+                {g.imageCaption && (
+                  <p className="guide-caption display">{g.imageCaption}</p>
+                )}
               </div>
             </article>
           ))}
         </div>
       </section>
 
-      {/* 04 — как создаются guide-журналы */}
+      {/* 04 — как создаются гайд-журналы */}
       <section className="section tight">
         <div className="container">
           <SectionTitle
             index="03"
-            title="Как создаются твои guide-журналы"
+            title="Как создаются твои гайд-журналы"
             note="Это не универсальные рекомендации, а персональный разбор твоей натальной карты."
           />
           <ol className="guide-steps">

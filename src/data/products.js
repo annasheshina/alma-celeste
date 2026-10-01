@@ -1,5 +1,5 @@
 import guideSunway from '../assets/guide-sunway.png'
-import guideVenera from '../assets/guide-venera.png'
+import guideVenera from '../assets/guide-venera-cover.jpg'
 import guideSolar from '../assets/guide-solar.png'
 
 export const guideJournals = [
@@ -10,7 +10,7 @@ export const guideJournals = [
     title: 'SUN WAY',
     tagline: 'Раскрой себя.\nНачни светить.',
     description:
-      'Индивидуальный guide-журнал по Солнцу в твоей натальной карте.\n\nОн помогает исследовать свою энергию, проявленность, самоощущение, сильные стороны и собственный способ раскрывать свой потенциал.',
+      'Индивидуальный гайд-журнал по Солнцу в твоей натальной карте.\n\nОн помогает исследовать свою энергию, проявленность, самоощущение, сильные стороны и собственный способ раскрывать свой потенциал.',
     includesLabel: 'Внутри гайда:',
     includes: [
       'Разбор твоего Солнца в знаке и доме',
@@ -22,7 +22,8 @@ export const guideJournals = [
     price: '7 777 ₽',
     cta: 'Купить SUN WAY',
     image: guideSunway,
-    imageAlt: 'Напечатанный guide-журнал SUN WAY',
+    imageAlt: 'Напечатанный гайд-журнал SUN WAY',
+    imageCaption: 'Энергетическая батарейка на всю жизнь',
     mirrored: false,
   },
   {
@@ -32,7 +33,7 @@ export const guideJournals = [
     title: 'МОЯ VENERA',
     tagline: 'Твоя женственность,\nпривлекательность и удовольствие.',
     description:
-      'Индивидуальный guide-журнал по Венере в твоей натальной карте.\n\nОн помогает исследовать твою женственность, привлекательность, отношения, эстетику и способы получать удовольствие от себя и жизни.',
+      'Индивидуальный гайд-журнал по Венере в твоей натальной карте.\n\nОн помогает исследовать твою женственность, привлекательность, отношения, эстетику и способы получать удовольствие от себя и жизни.',
     includesLabel: 'Внутри гайда:',
     includes: [
       'Разбор твоей Венеры в знаке и доме',
@@ -45,7 +46,8 @@ export const guideJournals = [
     price: '7 777 ₽',
     cta: 'Купить МОЮ VENERA',
     image: guideVenera,
-    imageAlt: 'Напечатанный guide-журнал МОЯ VENERA',
+    imageAlt: 'Напечатанный гайд-журнал МОЯ VENERA',
+    imageCaption: 'Ключ к твоей истинной Богине',
     mirrored: true,
   },
 ]
@@ -55,7 +57,7 @@ export const guideSteps = [
   { num: '02', title: 'Натальная карта', sub: '' },
   { num: '03', title: 'Анализ положения планеты', sub: 'Солнце или Венера' },
   { num: '04', title: 'Индивидуальные настройки', sub: 'и рекомендации' },
-  { num: '05', title: 'Твой guide-журнал', sub: 'с практиками' },
+  { num: '05', title: 'Твой гайд-журнал', sub: 'с практиками' },
 ]
 
 export const forecastGuides = [
@@ -126,10 +128,10 @@ export const forecastGuides = [
         text: 'Персональный список действий для реализации потенциала года.',
       },
     ],
-    format: 'Персональный guide-журнал + аудиосопровождение',
+    format: 'Персональный гайд-журнал + аудиосопровождение',
     cta: 'Получить глубокий прогноз',
     image: guideSolar,
-    imageAlt: 'Печатный guide-журнал «Соляр 2026–2027»',
+    imageAlt: 'Печатный гайд-журнал «Соляр 2026–2027»',
   },
 ]
 
@@ -138,7 +140,7 @@ export const forecastSteps = [
   { num: '02', title: 'Натальная карта', sub: '' },
   { num: '03', title: 'Анализ соляра', sub: 'и ключевых периодов' },
   { num: '04', title: 'Индивидуальные настройки', sub: 'и рекомендации' },
-  { num: '05', title: 'Твой прогноз', sub: 'guide-журнал + аудио' },
+  { num: '05', title: 'Твой прогноз', sub: 'гайд-журнал + аудио' },
 ]
 
 export const astrologyServices = [
