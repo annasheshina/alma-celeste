@@ -1866,7 +1866,7 @@ a {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin: 0;
+  margin-top: auto;
   padding: 14px 20px;
   border: 1px solid rgba(169, 140, 102, 0.4);
   border-radius: 14px;
@@ -1881,6 +1881,14 @@ a {
   content: '✦';
   flex-shrink: 0;
   font-size: 15px;
+}
+
+.guide-product--deep .guide-visual {
+  align-self: stretch;
+}
+
+.guide-product--deep .guide-journal {
+  margin-bottom: auto;
 }
 
 /* ---------- natal chart: process ---------- */
