@@ -64,7 +64,7 @@ export default function Home() {
                 onClick={(e) => scrollToAnchor(e, 'sec-about')}
               >
                 <span>Обо мне</span>
-                <span aria-hidden="true">↓</span>
+                <span aria-hidden="true">→</span>
               </a>
               <a href="#programs" className="btn btn-ghost">
                 <span>Посмотреть программы</span>
