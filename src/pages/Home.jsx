@@ -11,7 +11,7 @@ import ReviewsBlock from '../components/ReviewsBlock'
 import CTASection from '../components/CTASection'
 import { topics, programs, deepFormat } from '../data/content'
 import { astrologyServices } from '../data/products'
-import { STATS, TELEGRAM_URL } from '../data/site'
+import { STATS, FORMAT_PICK_URL } from '../data/site'
 import heroBg from '../assets/hero-main.jpg'
 import heroBgMobile from '../assets/hero-main-mobile.jpg'
 import bandBg from '../assets/band-mountains.jpg'
@@ -104,7 +104,7 @@ export default function Home() {
               <p className="quiz-text">
                 Пройдите короткий опрос — я помогу определить подходящий формат.
               </p>
-              <Button to={TELEGRAM_URL} variant="dark">
+              <Button to={FORMAT_PICK_URL} variant="dark">
                 Подобрать формат
               </Button>
             </div>

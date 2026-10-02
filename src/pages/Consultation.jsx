@@ -4,7 +4,6 @@ import SectionTitle from '../components/SectionTitle'
 import Button from '../components/Button'
 import CTASection from '../components/CTASection'
 import { consultationSteps } from '../data/content'
-import { TELEGRAM_URL } from '../data/site'
 import bandBg from '../assets/band-mountains.jpg'
 
 export default function Consultation() {
@@ -35,7 +34,7 @@ export default function Consultation() {
             ))}
           </div>
           <div style={{ marginTop: 44 }}>
-            <Button to={TELEGRAM_URL} variant="dark">
+            <Button to={'https://t.me/m/OWrGX13JM2Uy'} variant="dark">
               Записаться на консультацию
             </Button>
           </div>

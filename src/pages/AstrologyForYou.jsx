@@ -4,7 +4,6 @@ import SectionTitle from '../components/SectionTitle'
 import Button from '../components/Button'
 import ReviewsBlock from '../components/ReviewsBlock'
 import { coursePage } from '../data/content'
-import { TELEGRAM_URL } from '../data/site'
 import heroImg from '../assets/program-course.jpg'
 import portrait from '../assets/portrait-anna.jpg'
 
@@ -17,7 +16,7 @@ export default function AstrologyForYou() {
           {c.heroBadge}
         </p>
         <div className="hero-actions">
-          <Button to={TELEGRAM_URL} variant="light">
+          <Button to={'https://t.me/m/Vi3xeY9_YmEy'} variant="light">
             {c.cta}
           </Button>
         </div>
@@ -129,7 +128,7 @@ export default function AstrologyForYou() {
               <span className="price-current display">{c.price}</span>
               <span className="price-old">{c.oldPrice}</span>
             </div>
-            <Button to={TELEGRAM_URL} variant="dark">
+            <Button to={'https://t.me/m/Vi3xeY9_YmEy'} variant="dark">
               {c.cta}
             </Button>
           </div>

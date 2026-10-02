@@ -5,7 +5,6 @@ import Button from '../components/Button'
 import CTASection from '../components/CTASection'
 import ReviewCard from '../components/ReviewCard'
 import { venusPage } from '../data/content'
-import { TELEGRAM_URL } from '../data/site'
 import { reviews } from '../data/reviews'
 import heroImg from '../assets/program-venus.jpg'
 import illRelease from '../assets/ill-release.jpg'
@@ -27,7 +26,7 @@ export default function Venus() {
         subtitle={venusPage.heroSub}
       >
         <div className="hero-actions">
-          <Button to={TELEGRAM_URL} variant="light">
+          <Button to={'https://t.me/m/4VNxLES-NjAy'} variant="light">
             {venusPage.cta}
           </Button>
         </div>
@@ -158,7 +157,7 @@ export default function Venus() {
               <p className="today-bonus-title">{venusPage.inviteTitle}</p>
               <p className="today-bonus-text">{venusPage.inviteText}</p>
               <div style={{ marginTop: 26 }}>
-                <Button to={TELEGRAM_URL} variant="dark">
+                <Button to={'https://t.me/m/4VNxLES-NjAy'} variant="dark">
                   {venusPage.cta}
                 </Button>
               </div>
@@ -192,14 +191,18 @@ export default function Venus() {
             ))}
           </div>
           <div style={{ marginTop: 44 }}>
-            <Button to={TELEGRAM_URL} variant="dark">
+            <Button to={'https://t.me/m/4VNxLES-NjAy'} variant="dark">
               {venusPage.cta}
             </Button>
           </div>
         </div>
       </section>
 
-      <CTASection title="Готовы проснуться?" cta={venusPage.cta} />
+      <CTASection
+        title="Готовы проснуться?"
+        cta={venusPage.cta}
+        to="https://t.me/m/4VNxLES-NjAy"
+      />
       <Footer />
     </>
   )
