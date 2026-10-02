@@ -11,14 +11,18 @@ export const FOOTER_LINKS = [
   { to: '/contact', label: 'Контакты' },
 ]
 
+export const TELEGRAM_URL = 'https://t.me/anna_izumova'
+export const FORMAT_PICK_URL = 'https://t.me/m/tut4xsUCNzYy'
+
 export const SOCIALS = [
-  { id: 'instagram', label: 'Instagram', url: 'https://instagram.com/' },
-  { id: 'telegram', label: 'Telegram', url: 'https://t.me/' },
-  { id: 'youtube', label: 'YouTube', url: 'https://youtube.com/' },
+  { id: 'instagram', label: 'Instagram', url: 'https://www.instagram.com/anutka.she' },
+  { id: 'telegram', label: 'Telegram', url: 'https://t.me/anna_romannaa' },
+  { id: 'rutube', label: 'Rutube', url: 'https://rutube.ru/video/b922c010c9ba22ead5e8f275d740507c/' },
+  { id: 'vk', label: 'ВКонтакте', url: 'https://vk.com/anutka_she' },
 ]
 
 export const STATS = [
-  { value: '3+', label: 'года практики' },
+  { value: '4+', label: 'года практики' },
   { value: '200+', label: 'клиентов' },
-  { value: '7 000', label: 'в блоге' },
+  { value: '13 тыс', label: 'подписчиков' },
 ]

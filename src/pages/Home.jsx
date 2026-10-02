@@ -1,16 +1,19 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Button from '../components/Button'
 import SectionTitle from '../components/SectionTitle'
-import TopicCard from '../components/TopicCard'
+import TopicCard, { scrollToAnchor } from '../components/TopicCard'
 import ServiceCard from '../components/ServiceCard'
 import ProgramCard from '../components/ProgramCard'
 import ReviewsBlock from '../components/ReviewsBlock'
 import CTASection from '../components/CTASection'
 import { topics, programs, deepFormat } from '../data/content'
 import { astrologyServices } from '../data/products'
-import { STATS } from '../data/site'
+import { STATS, FORMAT_PICK_URL } from '../data/site'
 import heroBg from '../assets/hero-main.jpg'
+import heroBgMobile from '../assets/hero-main-mobile.jpg'
 import bandBg from '../assets/band-mountains.jpg'
 import quizBg from '../assets/program-venus.jpg'
 import portrait from '../assets/portrait-anna.jpg'
@@ -18,11 +21,27 @@ import portrait from '../assets/portrait-anna.jpg'
 const TICKER = ['Понять себя', 'Осознанность', 'Свобода', 'Новая версия себя']
 
 export default function Home() {
+  const { hash } = useLocation()
+
+  useEffect(() => {
+    if (!hash) return
+    const el = document.getElementById(hash.slice(1))
+    if (!el) return
+    const t = setTimeout(() => {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      el.classList.add('is-active')
+    }, 150)
+    return () => clearTimeout(t)
+  }, [hash])
+
   return (
     <>
       {/* ---------- hero ---------- */}
       <section className="hero">
-        <img className="hero-bg" src={heroBg} alt="" />
+        <picture>
+          <source media="(max-width: 760px)" srcSet={heroBgMobile} />
+          <img className="hero-bg" src={heroBg} alt="" />
+        </picture>
         <div className="hero-veil" />
         <Header />
         <div className="container" style={{ position: 'relative', zIndex: 2, flex: 1, display: 'flex' }}>
@@ -39,16 +58,21 @@ export default function Home() {
               Астролог, психолог и проводник в глубокую работу с собой.
             </p>
             <div className="hero-actions">
-              <Button to="/contact" variant="light">
-                Выбрать формат работы
-              </Button>
-              <Button to="/programs" variant="ghost">
-                Посмотреть программы
-              </Button>
+              <a
+                href="#sec-about"
+                className="btn btn-light"
+                onClick={(e) => scrollToAnchor(e, 'sec-about')}
+              >
+                <span>Обо мне</span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a href="#programs" className="btn btn-ghost">
+                <span>Посмотреть программы</span>
+                <span aria-hidden="true">→</span>
+              </a>
             </div>
           </div>
         </div>
-        <span className="hero-vertical">Природа · Знания · Женственность · Свобода</span>
         <div className="hero-ticker">
           {TICKER.map((w, i) => (
             <span key={w}>
@@ -80,7 +104,7 @@ export default function Home() {
               <p className="quiz-text">
                 Пройдите короткий опрос — я помогу определить подходящий формат.
               </p>
-              <Button to="/contact" variant="dark">
+              <Button to={FORMAT_PICK_URL} variant="dark">
                 Подобрать формат
               </Button>
             </div>
@@ -89,7 +113,7 @@ export default function Home() {
       </section>
 
       {/* ---------- астрология ---------- */}
-      <section className="section band on-photo">
+      <section className="section band on-photo" id="sec-astrology" style={{ scrollMarginTop: 90 }}>
         <img className="band-bg" src={bandBg} alt="" />
         <div className="band-veil" />
         <div className="container">
@@ -101,14 +125,16 @@ export default function Home() {
           />
           <div className="services-grid">
             {astrologyServices.map((s) => (
-              <ServiceCard key={s.id} service={s} />
+              <div className="scroll-anchor" id={`sec-${s.id}`} key={s.id}>
+                <ServiceCard service={s} />
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* ---------- программы ---------- */}
-      <section className="section">
+      <section className="section" id="programs" style={{ scrollMarginTop: 90 }}>
         <div className="container">
           <SectionTitle
             index="02"
@@ -117,7 +143,9 @@ export default function Home() {
           />
           <div className="programs-grid">
             {programs.map((p) => (
-              <ProgramCard key={p.id} program={p} />
+              <div className="scroll-anchor" id={`sec-${p.id}`} key={p.id}>
+                <ProgramCard program={p} />
+              </div>
             ))}
           </div>
         </div>
@@ -136,7 +164,7 @@ export default function Home() {
       </section>
 
       {/* ---------- обо мне ---------- */}
-      <section className="section">
+      <section className="section" id="sec-about" style={{ scrollMarginTop: 60 }}>
         <div className="container">
           <div className="about-layout">
             <div>

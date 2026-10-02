@@ -3,6 +3,7 @@ import Footer from '../components/Footer'
 import SectionTitle from '../components/SectionTitle'
 import Button from '../components/Button'
 import CTASection from '../components/CTASection'
+import { TELEGRAM_URL } from '../data/site'
 import heroImg from '../assets/deep-work.jpg'
 
 const suitable = [
@@ -27,7 +28,7 @@ export default function PersonalWork() {
         subtitle="Самый глубокий формат взаимодействия со мной: индивидуальное сопровождение с использованием астрологии, психологии и практик глубокой работы."
       >
         <div className="hero-actions">
-          <Button to="/contact" variant="light">
+          <Button to={TELEGRAM_URL} variant="light">
             Оставить запрос
           </Button>
         </div>
@@ -74,7 +75,7 @@ export default function PersonalWork() {
             заявки и первичного созвона.
           </p>
           <div style={{ marginTop: 44 }}>
-            <Button to="/contact" variant="dark">
+            <Button to={TELEGRAM_URL} variant="dark">
               Оставить запрос
             </Button>
           </div>
