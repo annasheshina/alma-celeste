@@ -124,7 +124,6 @@ export default function About() {
               <span aria-hidden="true">+</span>
             </summary>
             <div className="edu-extra-body">
-              <p className="about-text">{d.eduExtraIntro}</p>
               {d.eduExtra.map((g) => (
                 <div className="edu-group" key={g.group}>
                   <h4 className="edu-group-title display">{g.group}</h4>
