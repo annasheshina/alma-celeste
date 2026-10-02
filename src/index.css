@@ -429,20 +429,6 @@ a {
   margin-top: 36px;
 }
 
-.hero-vertical {
-  position: absolute;
-  z-index: 2;
-  right: 26px;
-  top: 50%;
-  transform: translateY(-50%);
-  writing-mode: vertical-rl;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.5em;
-  text-transform: uppercase;
-  color: rgba(243, 237, 226, 0.7);
-}
-
 .hero-ticker {
   position: relative;
   z-index: 2;
@@ -2150,10 +2136,6 @@ a {
 
   .hero-actions .btn {
     padding: 12px 24px;
-  }
-
-  .hero-vertical {
-    display: none;
   }
 
   .hero-ticker {

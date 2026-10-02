@@ -73,7 +73,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <span className="hero-vertical">Природа · Знания · Женственность · Свобода</span>
         <div className="hero-ticker">
           {TICKER.map((w, i) => (
             <span key={w}>
