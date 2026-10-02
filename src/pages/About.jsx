@@ -117,16 +117,24 @@ export default function About() {
           </div>
           <details className="edu-extra">
             <summary>
-              <span>{d.eduExtraTitle}</span>
+              <span>
+                {d.eduExtraTitle}{' '}
+                <em className="edu-extra-hint">(развернуть)</em>
+              </span>
               <span aria-hidden="true">+</span>
             </summary>
             <div className="edu-extra-body">
               <p className="about-text">{d.eduExtraIntro}</p>
-              <ul className="check-list" style={{ marginTop: 14 }}>
-                {d.eduExtra.map((e) => (
-                  <li key={e}>{e}</li>
-                ))}
-              </ul>
+              {d.eduExtra.map((g) => (
+                <div className="edu-group" key={g.group}>
+                  <h4 className="edu-group-title display">{g.group}</h4>
+                  <ul className="check-list">
+                    {g.items.map((e) => (
+                      <li key={e}>{e}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
               <p className="about-text" style={{ marginTop: 18 }}>
                 {d.eduExtraNote}
               </p>

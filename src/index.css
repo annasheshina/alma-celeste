@@ -1075,6 +1075,24 @@ a {
   padding: 0 28px 26px;
 }
 
+.edu-extra-hint {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: 14px;
+  color: var(--gold);
+}
+
+.edu-group {
+  margin-top: 22px;
+}
+
+.edu-group-title {
+  font-size: 19px;
+  color: var(--gold);
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+}
+
 .exp-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
