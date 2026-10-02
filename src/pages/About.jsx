@@ -8,6 +8,7 @@ import { aboutPage as d } from '../data/content'
 import heroImg from '../assets/band-mountains.jpg'
 import portrait from '../assets/anna-2.jpg'
 import portrait2 from '../assets/anna-3.jpg'
+import casePhoto from '../assets/about-case.jpg'
 import progVenus from '../assets/program-venus.jpg'
 import progAfy from '../assets/program-course.jpg'
 
@@ -162,16 +163,19 @@ export default function About() {
       <section className="section tight">
         <div className="container">
           <SectionTitle index="05" title="Мой первый кейс — моя собственная жизнь" />
-          <h3 className="display about-h3">{d.caseTitle}</h3>
-          <div style={{ maxWidth: 720 }}>
-            {d.case.map((p) => (
-              <p className="about-text" key={p}>
-                {p}
+          <div className="case-grid">
+            <div>
+              <h3 className="display about-h3">{d.caseTitle}</h3>
+              {d.case.map((p) => (
+                <p className="about-text" key={p}>
+                  {p}
+                </p>
+              ))}
+              <p className="about-statement display" style={{ fontSize: 22 }}>
+                {d.caseNote}
               </p>
-            ))}
-            <p className="about-statement display" style={{ fontSize: 22 }}>
-              {d.caseNote}
-            </p>
+            </div>
+            <img className="case-photo" src={casePhoto} alt="Анна Изи" />
           </div>
         </div>
       </section>

@@ -1079,6 +1079,22 @@ a {
   letter-spacing: 0.04em;
 }
 
+.case-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 64px;
+  align-items: center;
+}
+
+.case-photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 200px 200px 26px 26px;
+  box-shadow: 0 30px 70px rgba(47, 42, 36, 0.2);
+  filter: sepia(0.22) saturate(1.05) hue-rotate(-10deg);
+}
+
 .exp-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1195,6 +1211,16 @@ a {
   .about-progs,
   .exp-grid {
     grid-template-columns: 1fr;
+  }
+
+  .case-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .case-photo {
+    max-width: 320px;
+    margin: 0 auto;
   }
 
   .about-tag {
