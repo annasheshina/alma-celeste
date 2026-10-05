@@ -15,7 +15,7 @@ export const TELEGRAM_URL = 'https://t.me/anna_izumova'
 export const FORMAT_PICK_URL = 'https://t.me/m/tut4xsUCNzYy'
 
 export const SOCIALS = [
-  { id: 'instagram', label: 'Instagram', url: 'https://www.instagram.com/anutka.she' },
+  { id: 'instagram', label: 'Instagram', url: 'https://www.instagram.com/anna_izumova' },
   { id: 'telegram', label: 'Telegram', url: 'https://t.me/anna_romannaa' },
   { id: 'rutube', label: 'Rutube', url: 'https://rutube.ru/video/b922c010c9ba22ead5e8f275d740507c/' },
   { id: 'vk', label: 'ВКонтакте', url: 'https://vk.com/anutka_she' },

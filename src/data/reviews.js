@@ -12,10 +12,10 @@ const shotModules = import.meta.glob('../assets/reviews-*.png', {
 const shot = (section, n) => shotModules[`../assets/reviews-${section}-${n}.png`]
 
 export const SHOT_SECTIONS = [
-  { id: 'astrologiya', label: 'Астрология', count: 14 },
+  { id: 'astrologiya', label: 'Астрология', count: 13 },
   { id: 'psihologiya', label: 'Психология', count: 11 },
   { id: 'celitelstvo', label: 'Целительство', count: 15 },
-  { id: 'venera', label: 'Венера', count: 13 },
+  { id: 'venera', label: 'Венера', count: 12 },
   { id: 'prognozy', label: 'Прогнозы', count: 10 },
   { id: 'marafony', label: 'Марафоны', count: 14 },
   { id: 'efiry', label: 'Эфиры', count: 10 },
@@ -31,7 +31,7 @@ export const reviews = [
     category: 'astrology',
     name: 'Юля Фаткина',
     tag: 'Натальная карта',
-    text: 'Никто еще так мне не раскладывал мою натальную карту, как Анна. Самый лучший астролог',
+    text: 'Никто еще так мне не раскладывал мою натальную карту, как Анна @anna_izumova. Самый лучший астролог',
   },
   {
     id: 2,

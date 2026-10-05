@@ -5,6 +5,7 @@ import ReviewsBlock from '../components/ReviewsBlock'
 import CTASection from '../components/CTASection'
 import SectionTitle from '../components/SectionTitle'
 import { SHOT_SECTIONS } from '../data/reviews'
+import Button from '../components/Button'
 import bandBg from '../assets/band-mountains.jpg'
 
 const FLAT = SHOT_SECTIONS.flatMap((sec) =>
@@ -89,6 +90,17 @@ export default function Reviews() {
           </div>
         </div>
       )}
+
+      <section className="section tight">
+        <div className="container reviews-tg-cta">
+          <p className="reviews-tg-note">
+            Все отзывы публикуются в открытом чате — присоединяйтесь и читайте истории вживую.
+          </p>
+          <Button to="https://t.me/anna_izi_otziv" variant="dark">
+            Читать все отзывы в Telegram
+          </Button>
+        </div>
+      </section>
 
       <CTASection />
       <Footer />

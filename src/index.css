@@ -2792,3 +2792,18 @@ a {
     border-radius: 12px;
   }
 }
+
+.reviews-tg-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  text-align: center;
+}
+
+.reviews-tg-note {
+  max-width: 460px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--muted);
+}
