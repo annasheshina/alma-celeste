@@ -12,12 +12,12 @@ const shotModules = import.meta.glob('../assets/reviews-*.png', {
 const shot = (section, n) => shotModules[`../assets/reviews-${section}-${n}.png`]
 
 export const SHOT_SECTIONS = [
-  { id: 'astrologiya', label: 'Астрология', count: 10 },
-  { id: 'psihologiya', label: 'Психология', count: 10 },
-  { id: 'celitelstvo', label: 'Целительство', count: 10 },
-  { id: 'venera', label: 'Венера', count: 10 },
+  { id: 'astrologiya', label: 'Астрология', count: 14 },
+  { id: 'psihologiya', label: 'Психология', count: 11 },
+  { id: 'celitelstvo', label: 'Целительство', count: 15 },
+  { id: 'venera', label: 'Венера', count: 13 },
   { id: 'prognozy', label: 'Прогнозы', count: 10 },
-  { id: 'marafony', label: 'Марафоны', count: 10 },
+  { id: 'marafony', label: 'Марафоны', count: 14 },
   { id: 'efiry', label: 'Эфиры', count: 10 },
 ].map((s) => ({
   ...s,
@@ -116,5 +116,19 @@ export const reviews = [
     name: 'Дарья Гладышева',
     tag: 'Марафон',
     text: 'Сместился фокус внутрь, на себя любимую, на свой свет — и он теперь сияет многим ярче, чем до марафона',
+  },
+  {
+    id: 14,
+    category: 'astrology',
+    name: 'Светлана Уличева',
+    tag: 'Личная консультация',
+    text: 'Я получила такой заряд и вектор в своей жизни, настоящую инструкцию к ней, просто иди и делай. Ты умеешь направлять и чувствуешь стержень человека',
+  },
+  {
+    id: 15,
+    category: 'astrology',
+    name: 'Ирина',
+    tag: 'Натальная карта',
+    text: 'Оказывается, это Уран так действует. Кстати за 44 года я сменила 2 страны, 3 города и 11 квартир! И мне никогда не было это в тягость',
   },
 ]

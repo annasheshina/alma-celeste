@@ -21,6 +21,12 @@ export const SOCIALS = [
   { id: 'vk', label: 'ВКонтакте', url: 'https://vk.com/anutka_she' },
 ]
 
+export const LEGAL_DOCS = [
+  { href: '/docs/soglasie-pd.pdf', label: 'Согласие на обработку ПД' },
+  { href: '/docs/politika-konfidencialnosti.pdf', label: 'Политика конфиденциальности' },
+  { href: '/docs/oferta.pdf', label: 'Оферта' },
+]
+
 export const STATS = [
   { value: '4+', label: 'года практики' },
   { value: '200+', label: 'клиентов' },

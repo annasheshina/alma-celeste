@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { FOOTER_LINKS, SOCIALS } from '../data/site'
+import { FOOTER_LINKS, LEGAL_DOCS, SOCIALS } from '../data/site'
 import Sparkle from './Sparkle'
 
 function SocialIcon({ id }) {
@@ -74,6 +74,13 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-bottom">
+          <nav className="footer-legal" aria-label="Документы">
+            {LEGAL_DOCS.map((d) => (
+              <a key={d.href} href={d.href} target="_blank" rel="noreferrer">
+                {d.label}
+              </a>
+            ))}
+          </nav>
           <span>© ANNA IZI · Alma Celeste</span>
           <span>Астрология как путь к себе</span>
         </div>
