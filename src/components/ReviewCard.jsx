@@ -2,7 +2,9 @@ export default function ReviewCard({ review }) {
   return (
     <article className="review-card">
       <div className="review-head">
-        <img className="review-avatar" src={review.avatar} alt={review.name} />
+        <span className="review-avatar initials" aria-hidden="true">
+          {review.name.charAt(0)}
+        </span>
         <div>
           <p className="review-name">{review.name}</p>
           <p className="review-tag">{review.tag}</p>
