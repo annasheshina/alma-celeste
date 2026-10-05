@@ -2807,3 +2807,94 @@ a {
   line-height: 1.7;
   color: var(--muted);
 }
+
+/* ---------- карта дня ---------- */
+.daycard-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(24, 19, 14, 0.72);
+  backdrop-filter: blur(6px);
+  animation: daycard-fade 0.35s ease both;
+}
+.daycard {
+  position: relative;
+  width: min(400px, 92vw);
+  padding: 56px 40px 34px;
+  text-align: center;
+  color: var(--cream);
+  background:
+    radial-gradient(circle at 50% 18%, rgba(169, 140, 102, 0.22), transparent 55%),
+    linear-gradient(165deg, #352c22 0%, #241d16 60%, #1c1712 100%);
+  border: 1px solid rgba(169, 140, 102, 0.55);
+  border-radius: 14px;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.5),
+    inset 0 0 0 8px rgba(242, 236, 223, 0.03),
+    inset 0 0 0 9px rgba(169, 140, 102, 0.18);
+  animation: daycard-flip 0.65s cubic-bezier(0.2, 0.8, 0.3, 1.1) both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+@keyframes daycard-fade { from { opacity: 0 } to { opacity: 1 } }
+@keyframes daycard-flip {
+  from { transform: perspective(900px) rotateY(-80deg) scale(0.9); opacity: 0 }
+  to { transform: perspective(900px) rotateY(0) scale(1); opacity: 1 }
+}
+.daycard-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: 0;
+  color: rgba(242, 236, 223, 0.55);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.daycard-close:hover { color: var(--cream) }
+.daycard-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(242, 236, 223, 0.55);
+}
+.daycard-symbol {
+  font-size: 56px;
+  line-height: 1;
+  color: var(--gold);
+  text-shadow: 0 0 24px rgba(169, 140, 102, 0.6);
+  margin-top: 6px;
+}
+.daycard-divider {
+  font-size: 13px;
+  color: rgba(169, 140, 102, 0.8);
+  letter-spacing: 0.5em;
+  padding-left: 0.5em;
+}
+.daycard-title {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0;
+}
+.daycard-quote {
+  font-size: 16px;
+  line-height: 1.65;
+  color: rgba(242, 236, 223, 0.85);
+  max-width: 300px;
+  margin: 0;
+}
+.daycard-foot {
+  margin-top: 14px;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(242, 236, 223, 0.35);
+}

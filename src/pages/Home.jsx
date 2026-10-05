@@ -8,6 +8,7 @@ import TopicCard, { scrollToAnchor } from '../components/TopicCard'
 import ServiceCard from '../components/ServiceCard'
 import ProgramCard from '../components/ProgramCard'
 import ReviewsBlock from '../components/ReviewsBlock'
+import DayCard from '../components/DayCard'
 import CTASection from '../components/CTASection'
 import { topics, programs, deepFormat } from '../data/content'
 import { astrologyServices } from '../data/products'
@@ -70,6 +71,7 @@ export default function Home() {
                 <span>Посмотреть программы</span>
                 <span aria-hidden="true">→</span>
               </a>
+              <DayCard />
             </div>
           </div>
         </div>
