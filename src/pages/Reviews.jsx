@@ -4,11 +4,24 @@ import Footer from '../components/Footer'
 import ReviewsBlock from '../components/ReviewsBlock'
 import CTASection from '../components/CTASection'
 import SectionTitle from '../components/SectionTitle'
-import { shotReviews } from '../data/reviews'
+import { SHOT_SECTIONS } from '../data/reviews'
 import bandBg from '../assets/band-mountains.jpg'
+
+const FLAT = SHOT_SECTIONS.flatMap((sec) =>
+  sec.shots.map((src) => ({ src, tag: sec.label }))
+)
 
 export default function Reviews() {
   const [open, setOpen] = useState(null)
+
+  const openAt = (secIdx, shotIdx) =>
+    setOpen(
+      SHOT_SECTIONS.slice(0, secIdx).reduce((n, s) => n + s.shots.length, 0) +
+        shotIdx
+    )
+  const step = (d) =>
+    setOpen((v) => (v === null ? v : (v + d + FLAT.length) % FLAT.length))
+
   return (
     <>
       <PageHero
@@ -22,35 +35,58 @@ export default function Reviews() {
         </div>
       </section>
 
-      <section className="section tight">
-        <div className="container">
-          <SectionTitle
-            index="02"
-            title="Живые отзывы из чатов"
-            note="Сообщения участниц марафонов и программ — как есть."
-          />
-          <div className="shot-grid">
-            {shotReviews.map((s, i) => (
-              <button
-                className="shot-card"
-                key={s.src}
-                onClick={() => setOpen(i)}
-                aria-label="Открыть отзыв крупно"
-              >
-                <img src={s.src} alt="" loading="lazy" />
-                <span className="shot-tag">{s.tag}</span>
-              </button>
-            ))}
+      {SHOT_SECTIONS.map((sec, si) => (
+        <section className="section tight" key={sec.id}>
+          <div className="container">
+            <SectionTitle
+              index={String(si + 2).padStart(2, '0')}
+              title={sec.label}
+              note="Отзывы из Telegram-чата «Анна Изи. Отзывы» — как есть."
+            />
+            <div className="shot-grid">
+              {sec.shots.map((src, i) => (
+                <button
+                  className="shot-card"
+                  key={src}
+                  onClick={() => openAt(si, i)}
+                  aria-label="Открыть отзыв крупно"
+                >
+                  <img src={src} alt="" loading="lazy" />
+                  <span className="shot-tag">{sec.label}</span>
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ))}
 
       {open !== null && (
         <div className="shot-lightbox" onClick={() => setOpen(null)}>
           <button className="shot-close" aria-label="Закрыть">
             ×
           </button>
-          <img src={shotReviews[open].src} alt="" />
+          <img src={FLAT[open].src} alt="" />
+          <div className="shot-nav">
+            <button
+              onClick={(e) => {
+                e.stopPropagation()
+                step(-1)
+              }}
+              aria-label="Предыдущий отзыв"
+            >
+              ←
+            </button>
+            <span>{FLAT[open].tag}</span>
+            <button
+              onClick={(e) => {
+                e.stopPropagation()
+                step(1)
+              }}
+              aria-label="Следующий отзыв"
+            >
+              →
+            </button>
+          </div>
         </div>
       )}
 

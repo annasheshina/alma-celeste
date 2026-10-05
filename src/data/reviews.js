@@ -2,13 +2,6 @@ import avatar1 from '../assets/avatar-1.jpg'
 import avatar2 from '../assets/avatar-2.jpg'
 import avatar3 from '../assets/avatar-3.jpg'
 import avatar4 from '../assets/avatar-4.jpg'
-import shot1 from '../assets/rev-marathon-1.jpg'
-import shot2 from '../assets/rev-marathon-2.jpg'
-import shot3 from '../assets/rev-marathon-3.jpg'
-import shot4 from '../assets/rev-marathon-4.jpg'
-import shot5 from '../assets/rev-marathon-5.jpg'
-import shot6 from '../assets/rev-marathon-6.jpg'
-import shot7 from '../assets/rev-marathon-7.jpg'
 
 export const REVIEW_CATEGORIES = [
   { id: 'all', label: 'Все' },
@@ -17,15 +10,24 @@ export const REVIEW_CATEGORIES = [
   { id: 'programs', label: 'Программы' },
 ]
 
-export const shotReviews = [
-  { src: shot1, tag: 'Марафон' },
-  { src: shot2, tag: 'Марафон' },
-  { src: shot3, tag: 'Марафон' },
-  { src: shot4, tag: 'Марафон' },
-  { src: shot5, tag: 'Марафон' },
-  { src: shot6, tag: 'Марафон' },
-  { src: shot7, tag: 'Марафон' },
-]
+const shotModules = import.meta.glob('../assets/reviews-*.png', {
+  eager: true,
+  import: 'default',
+})
+const shot = (section, n) => shotModules[`../assets/reviews-${section}-${n}.png`]
+
+export const SHOT_SECTIONS = [
+  { id: 'astrologiya', label: 'Астрология', count: 10 },
+  { id: 'psihologiya', label: 'Психология', count: 10 },
+  { id: 'celitelstvo', label: 'Целительство', count: 10 },
+  { id: 'venera', label: 'Венера', count: 10 },
+  { id: 'prognozy', label: 'Прогнозы', count: 10 },
+  { id: 'marafony', label: 'Марафоны', count: 10 },
+  { id: 'efiry', label: 'Эфиры', count: 10 },
+].map((s) => ({
+  ...s,
+  shots: Array.from({ length: s.count }, (_, i) => shot(s.id, i + 1)),
+}))
 
 // Редактируемые данные: замените тексты, имена и фотографии на реальные отзывы.
 export const reviews = [
