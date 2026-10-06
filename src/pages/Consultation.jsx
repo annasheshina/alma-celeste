@@ -33,9 +33,12 @@ export default function Consultation() {
               </div>
             ))}
           </div>
-          <div style={{ marginTop: 44 }}>
+          <div style={{ marginTop: 44, display: 'flex', gap: 16, flexWrap: 'wrap' }}>
             <Button to={'https://t.me/m/OWrGX13JM2Uy'} variant="dark">
               Записаться на консультацию
+            </Button>
+            <Button to="/reviews#astrologiya" variant="ghost-dark">
+              Отзывы
             </Button>
           </div>
         </div>

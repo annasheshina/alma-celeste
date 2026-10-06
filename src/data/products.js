@@ -20,6 +20,7 @@ export const guideJournals = [
       'Практический трекер',
     ],
     price: '7 777 ₽',
+    priceNote: '+ голосовое сопровождение',
     cta: 'Купить SUN WAY',
     ctaUrl: 'https://t.me/m/DIqqFBY6ZGI6',
     image: guideSunway,
@@ -45,7 +46,8 @@ export const guideJournals = [
       'Практический трекер',
     ],
     price: '7 777 ₽',
-    cta: 'Купить МОЮ VENERA',
+    priceNote: '+ голосовое сопровождение',
+    cta: 'Купить МОЯ VENERA',
     ctaUrl: 'https://t.me/m/TGsH0PzeN2My',
     image: guideVenera,
     imageAlt: 'Напечатанный гайд-журнал МОЯ VENERA',
@@ -59,7 +61,7 @@ export const guideSteps = [
   { num: '02', title: 'Натальная карта', sub: '' },
   { num: '03', title: 'Анализ положения планеты', sub: 'Солнце или Венера' },
   { num: '04', title: 'Индивидуальные настройки', sub: 'и рекомендации' },
-  { num: '05', title: 'Твой гайд-журнал', sub: 'с практиками' },
+  { num: '05', title: 'Твой гайд-журнал', sub: 'с действиями' },
 ]
 
 export const forecastGuides = [

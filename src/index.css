@@ -1890,6 +1890,17 @@ a {
   color: var(--ink);
 }
 
+.guide-price-note {
+  margin-left: 14px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
 .guide-visual {
   display: flex;
   flex-direction: column;
@@ -3100,4 +3111,71 @@ a {
 @media (max-width: 620px) {
   .gifts-grid { grid-template-columns: 1fr; }
   .dice-panel { padding: 36px 18px; }
+}
+
+.final-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.weeks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.week-card {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  overflow: hidden;
+  padding: 0;
+}
+
+.week-card-media {
+  min-height: 300px;
+}
+
+.week-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.week-card-body {
+  padding: 44px 48px;
+}
+
+.course-hero-art {
+  border-radius: 34px;
+  overflow: hidden;
+}
+
+.course-hero-art img {
+  width: 100%;
+  max-height: 560px;
+  object-fit: cover;
+  display: block;
+}
+
+.price-row-col {
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+@media (max-width: 1100px) {
+  .week-card {
+    grid-template-columns: 1fr;
+  }
+  .week-card-body {
+    padding: 30px 28px;
+  }
+}
+
+.course-format-art {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 }
