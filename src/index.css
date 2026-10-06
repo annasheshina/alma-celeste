@@ -2826,9 +2826,9 @@ a {
   width: min(400px, 92vw);
   max-height: 92vh;
   overflow: hidden auto;
-  color: var(--cream);
-  background: linear-gradient(165deg, #352c22 0%, #241d16 60%, #1c1712 100%);
-  border: 1px solid rgba(169, 140, 102, 0.55);
+  color: var(--ink);
+  background: linear-gradient(165deg, #faf2e2 0%, #f3e6cc 60%, #eddcbb 100%);
+  border: 1px solid rgba(169, 140, 102, 0.6);
   border-radius: 16px;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
   animation: daycard-flip 0.65s cubic-bezier(0.2, 0.8, 0.3, 1.1) both;
@@ -2840,59 +2840,60 @@ a {
 }
 .daycard-close {
   position: absolute;
-  top: 10px;
-  right: 14px;
+  top: 12px;
+  right: 12px;
   z-index: 2;
-  background: rgba(24, 19, 14, 0.5);
+  background: rgba(34, 28, 21, 0.62);
   border-radius: 50%;
-  width: 34px;
-  height: 34px;
+  width: 46px;
+  height: 46px;
   border: 0;
-  color: rgba(242, 236, 223, 0.85);
-  font-size: 24px;
+  color: var(--cream);
+  font-size: 26px;
   line-height: 1;
   cursor: pointer;
-  transition: color 0.2s;
+  transition: background 0.2s;
 }
-.daycard-close:hover { color: var(--cream) }
+.daycard-close:hover { background: rgba(34, 28, 21, 0.85) }
 .daycard-art img {
   display: block;
   width: 100%;
-  aspect-ratio: 3 / 4;
+  height: min(46vh, 430px);
   object-fit: cover;
+  object-position: center 20%;
 }
 .daycard-body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  padding: 22px 30px 26px;
+  gap: 10px;
+  padding: 18px 30px 22px;
   text-align: center;
-  border-top: 1px solid rgba(169, 140, 102, 0.35);
+  border-top: 1px solid rgba(169, 140, 102, 0.4);
 }
 .daycard-eyebrow {
   font-size: 11px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(242, 236, 223, 0.55);
+  color: rgba(47, 42, 36, 0.55);
 }
 .daycard-title {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 500;
   margin: 0;
 }
 .daycard-message {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.6;
-  color: rgba(242, 236, 223, 0.88);
+  color: rgba(47, 42, 36, 0.88);
   max-width: 310px;
   margin: 0;
 }
 .daycard-advice {
-  border: 1px solid rgba(169, 140, 102, 0.35);
+  border: 1px solid rgba(169, 140, 102, 0.45);
   border-radius: 10px;
-  padding: 14px 18px;
-  background: rgba(169, 140, 102, 0.08);
+  padding: 12px 18px;
+  background: rgba(169, 140, 102, 0.12);
 }
 .daycard-advice-label {
   display: block;
@@ -2900,19 +2901,19 @@ a {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 .daycard-advice-text {
-  font-size: 14px;
+  font-size: 13.5px;
   line-height: 1.6;
-  color: rgba(242, 236, 223, 0.85);
+  color: rgba(47, 42, 36, 0.85);
   margin: 0;
 }
 .daycard-foot {
   font-size: 10px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(242, 236, 223, 0.35);
+  color: rgba(47, 42, 36, 0.4);
 }
 
 /* ---------- gifts ---------- */
