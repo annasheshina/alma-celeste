@@ -29,15 +29,6 @@ export default function AstrologyForYou() {
         </div>
       </PageHero>
 
-      {/* Иллюстрация */}
-      <section className="section tight">
-        <div className="container">
-          <div className="course-hero-art">
-            <img src={astroImg} alt="Астрологическая карта" />
-          </div>
-        </div>
-      </section>
-
       {/* Что даст курс */}
       <section className="section natal-intro">
         <div className="container">
@@ -113,7 +104,7 @@ export default function AstrologyForYou() {
         </div>
       </section>
 
-      {/* Формат + бонусы */}
+      {/* Формат */}
       <section className="section tight">
         <div className="container course-format-grid">
           <div>
@@ -124,18 +115,8 @@ export default function AstrologyForYou() {
               ))}
             </ul>
           </div>
-          <div>
-            <SectionTitle index="04" title="Бонусы модуля" />
-            <ul className="check-list" style={{ maxWidth: 560 }}>
-              {c.bonuses.map((b) => (
-                <li key={b}>{b}</li>
-              ))}
-            </ul>
-            <div className="today-bonus">
-              <p className="today-bonus-label">Для тех, кто покупает на этой неделе</p>
-              <p className="today-bonus-title">{c.todayBonus.title}</p>
-              <p className="today-bonus-text">{c.todayBonus.text}</p>
-            </div>
+          <div className="course-hero-art">
+            <img src={astroImg} alt="Астрология" />
           </div>
         </div>
       </section>
@@ -152,6 +133,27 @@ export default function AstrologyForYou() {
             <Button to={'https://t.me/m/Vi3xeY9_YmEy'} variant="dark">
               {c.cta}
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Бонусы */}
+      <section className="section tight">
+        <div className="container course-format-grid">
+          <div>
+            <SectionTitle index="04" title="Бонусы модуля" />
+            <ul className="check-list" style={{ maxWidth: 560 }}>
+              {c.bonuses.map((b) => (
+                <li key={b}>{b}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <div className="today-bonus">
+              <p className="today-bonus-label">Тем, кто купит на этой неделе</p>
+              <p className="today-bonus-title">В подарок — модуль по продвижению</p>
+              <p className="today-bonus-text">{c.todayBonus.text}</p>
+            </div>
           </div>
         </div>
       </section>
