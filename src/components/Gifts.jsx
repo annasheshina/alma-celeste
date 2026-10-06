@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import SectionTitle from './SectionTitle'
 import { GIFTS, DICE_PRIZES } from '../data/gifts'
 
@@ -7,12 +7,10 @@ const DICE_FACES = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅']
 function Dice() {
   const [face, setFace] = useState(5)
   const [rolling, setRolling] = useState(false)
-  const [prize, setPrize] = useState(null)
 
   const roll = () => {
     if (rolling) return
     setRolling(true)
-    setPrize(null)
     const win = Math.floor(Math.random() * 6)
     let ticks = 0
     const timer = setInterval(() => {
@@ -21,19 +19,10 @@ function Dice() {
       if (ticks >= 14) {
         clearInterval(timer)
         setFace(win)
-        setPrize(DICE_PRIZES[win])
-        setRolling(false)
+        window.location.href = DICE_PRIZES[win].url
       }
     }, 90)
   }
-
-  useEffect(() => {
-    if (!prize) return
-    const t = setTimeout(() => {
-      window.location.href = prize.url
-    }, 1500)
-    return () => clearTimeout(t)
-  }, [prize])
 
   return (
     <div className="dice-panel">
@@ -55,13 +44,6 @@ function Dice() {
       <button type="button" className="btn btn-ghost" onClick={roll} disabled={rolling}>
         {rolling ? 'Кубик катится…' : 'Кинуть кубик'}
       </button>
-      {prize ? (
-        <a className="dice-prize" href={prize.url} target="_blank" rel="noreferrer">
-          <span className="dice-prize-eyebrow">Твой приз</span>
-          <span className="dice-prize-name">{prize.label}</span>
-          <span className="dice-prize-note">{prize.note} · забрать →</span>
-        </a>
-      ) : null}
     </div>
   )
 }
