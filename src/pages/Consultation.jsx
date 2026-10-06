@@ -34,7 +34,7 @@ export default function Consultation() {
             ))}
           </div>
           <div style={{ marginTop: 44 }}>
-            <Button to="/contact" variant="dark">
+            <Button to={'https://t.me/m/OWrGX13JM2Uy'} variant="dark">
               Записаться на консультацию
             </Button>
           </div>
