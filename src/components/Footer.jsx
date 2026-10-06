@@ -42,12 +42,12 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container">
         <div className="footer-top">
-          <Link to="/" className="brand" aria-label="ANNA IZI — ALMA CELESTE">
+          <Link to="/" className="brand" aria-label="АННА ИЗИ — ALMA CELESTE">
             <span className="brand-mark">
               <Sparkle size={14} />
             </span>
             <span className="brand-name">
-              <strong>ANNA IZI</strong>
+              <strong>АННА ИЗИ</strong>
               <span>Alma Celeste</span>
             </span>
           </Link>
@@ -81,7 +81,7 @@ export default function Footer() {
               </a>
             ))}
           </nav>
-          <span>© ANNA IZI · Alma Celeste</span>
+          <span>© АННА ИЗИ · Alma Celeste</span>
           <span>Астрология как путь к себе</span>
         </div>
       </div>
