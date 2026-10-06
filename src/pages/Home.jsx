@@ -9,6 +9,7 @@ import ServiceCard from '../components/ServiceCard'
 import ProgramCard from '../components/ProgramCard'
 import ReviewsBlock from '../components/ReviewsBlock'
 import DayCard from '../components/DayCard'
+import Gifts from '../components/Gifts'
 import CTASection from '../components/CTASection'
 import { topics, programs, deepFormat } from '../data/content'
 import { astrologyServices } from '../data/products'
@@ -165,12 +166,15 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------- подарки ---------- */}
+      <Gifts />
+
       {/* ---------- обо мне ---------- */}
       <section className="section" id="sec-about" style={{ scrollMarginTop: 60 }}>
         <div className="container">
           <div className="about-layout">
             <div>
-              <span className="section-index">04</span>
+              <span className="section-index">05</span>
               <h2 className="about-title display">Обо мне</h2>
               <p className="about-text">
                 Я соединяю знания астрологии, психологии и практики глубинной работы, чтобы не
@@ -200,7 +204,7 @@ export default function Home() {
       <section className="section tight">
         <div className="container">
           <SectionTitle
-            index="05"
+            index="06"
             title="Отзывы"
             note="Реальные истории и результаты людей, с которыми мы работали."
             linkTo="/reviews"
@@ -210,7 +214,7 @@ export default function Home() {
         </div>
       </section>
 
-      <CTASection index="06" />
+      <CTASection index="07" />
       <Footer />
     </>
   )
