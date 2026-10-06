@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import SectionTitle from './SectionTitle'
 import { GIFTS, DICE_PRIZES } from '../data/gifts'
 
@@ -26,6 +26,14 @@ function Dice() {
       }
     }, 90)
   }
+
+  useEffect(() => {
+    if (!prize) return
+    const t = setTimeout(() => {
+      window.location.href = prize.url
+    }, 1500)
+    return () => clearTimeout(t)
+  }, [prize])
 
   return (
     <div className="dice-panel">
