@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { DAY_CARDS } from '../data/dayCards'
 
 function cardOfTheDay() {
@@ -31,28 +32,30 @@ export default function DayCard() {
         <span>Получить карту дня</span>
         <span aria-hidden="true">✦</span>
       </button>
-      {open && (
-        <div className="daycard-overlay" role="dialog" aria-modal="true" onClick={() => setOpen(false)}>
-          <div className="daycard" onClick={(e) => e.stopPropagation()}>
-            <button className="daycard-close" aria-label="Закрыть" onClick={() => setOpen(false)}>
-              ×
-            </button>
-            <div className="daycard-art">
-              <img src={card.img} alt={card.title} />
-            </div>
-            <div className="daycard-body">
-              <span className="daycard-eyebrow">Карта дня · {today}</span>
-              <h3 className="daycard-title display">{card.title}</h3>
-              <p className="daycard-message">{card.message}</p>
-              <div className="daycard-advice">
-                <span className="daycard-advice-label">Рекомендация</span>
-                <p className="daycard-advice-text">{card.advice}</p>
+      {open &&
+        createPortal(
+          <div className="daycard-overlay" role="dialog" aria-modal="true" onClick={() => setOpen(false)}>
+            <div className="daycard" onClick={(e) => e.stopPropagation()}>
+              <button className="daycard-close" aria-label="Закрыть" onClick={() => setOpen(false)}>
+                ×
+              </button>
+              <div className="daycard-art">
+                <img src={card.img} alt={card.title} />
               </div>
-              <span className="daycard-foot">ANNA IZI · карта обновляется каждый день</span>
+              <div className="daycard-body">
+                <span className="daycard-eyebrow">Карта дня · {today}</span>
+                <h3 className="daycard-title display">{card.title}</h3>
+                <p className="daycard-message">{card.message}</p>
+                <div className="daycard-advice">
+                  <span className="daycard-advice-label">Рекомендация</span>
+                  <p className="daycard-advice-text">{card.advice}</p>
+                </div>
+                <span className="daycard-foot">ANNA IZI · карта обновляется каждый день</span>
+              </div>
             </div>
-          </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
     </>
   )
 }
