@@ -3179,3 +3179,28 @@ a {
   flex-direction: column;
   gap: 22px;
 }
+
+.course-intro-grid {
+  max-width: none;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 56px;
+  align-items: center;
+  text-align: left;
+}
+
+.course-intro-grid .natal-ornament {
+  justify-content: flex-start;
+}
+
+.course-intro-grid .solar-shows {
+  margin: 24px 0 0;
+  max-width: none;
+}
+
+@media (max-width: 900px) {
+  .course-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

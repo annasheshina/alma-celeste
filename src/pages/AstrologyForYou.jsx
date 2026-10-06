@@ -33,25 +33,27 @@ export default function AstrologyForYou() {
       {/* Что даст курс */}
       <section className="section natal-intro">
         <div className="container">
-          <div className="natal-intro-inner">
-            <div className="course-hero-art" style={{ marginBottom: 36 }}>
+          <div className="natal-intro-inner course-intro-grid">
+            <div>
+              <span className="natal-ornament" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+                  <path d="M12 3l1.6 6.4L20 11l-6.4 1.6L12 19l-1.6-6.4L4 11l6.4-1.6z" />
+                </svg>
+              </span>
+              <h2 className="natal-intro-title display">
+                Что даст
+                <br />
+                этот курс
+              </h2>
+              <ul className="solar-shows">
+                {c.benefits.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="course-hero-art">
               <img src={astroImg} alt="Обучение астрологии" />
             </div>
-            <span className="natal-ornament" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-                <path d="M12 3l1.6 6.4L20 11l-6.4 1.6L12 19l-1.6-6.4L4 11l6.4-1.6z" />
-              </svg>
-            </span>
-            <h2 className="natal-intro-title display">
-              Что даст
-              <br />
-              этот курс
-            </h2>
-            <ul className="solar-shows">
-              {c.benefits.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
           </div>
         </div>
       </section>
