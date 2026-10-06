@@ -175,6 +175,11 @@ export default function Venus() {
                 <ReviewCard key={r.id} review={r} />
               ))}
             </div>
+            <div style={{ marginTop: 44 }}>
+              <Button to="/reviews#venera" variant="dark">
+                Смотреть все отзывы
+              </Button>
+            </div>
           </div>
         </section>
       )}

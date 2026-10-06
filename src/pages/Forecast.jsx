@@ -207,9 +207,14 @@ export default function Forecast() {
               глубже, задать вопросы и получить индивидуальные рекомендации — можно выбрать
               личную консультацию.
             </p>
-            <Button to="/consultation" variant="dark">
-              Личная консультация
-            </Button>
+            <div className="final-actions">
+              <Button to="/consultation" variant="dark">
+                Личная консультация
+              </Button>
+              <Button to="/reviews#prognozy" variant="ghost-dark">
+                Отзывы
+              </Button>
+            </div>
           </div>
         </div>
       </section>

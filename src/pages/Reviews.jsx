@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import PageHero from '../components/PageHero'
 import Footer from '../components/Footer'
 import ReviewsBlock from '../components/ReviewsBlock'
@@ -14,6 +15,13 @@ const FLAT = SHOT_SECTIONS.flatMap((sec) =>
 
 export default function Reviews() {
   const [open, setOpen] = useState(null)
+  const { hash } = useLocation()
+
+  useEffect(() => {
+    if (!hash) return
+    const el = document.getElementById(hash.slice(1))
+    if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 200)
+  }, [hash])
 
   const openAt = (secIdx, shotIdx) =>
     setOpen(
@@ -37,7 +45,7 @@ export default function Reviews() {
       </section>
 
       {SHOT_SECTIONS.map((sec, si) => (
-        <section className="section tight" key={sec.id}>
+        <section className="section tight" key={sec.id} id={sec.id} style={{ scrollMarginTop: 90 }}>
           <div className="container">
             <SectionTitle
               index={String(si + 2).padStart(2, '0')}

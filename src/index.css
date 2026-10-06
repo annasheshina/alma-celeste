@@ -3112,3 +3112,9 @@ a {
   .gifts-grid { grid-template-columns: 1fr; }
   .dice-panel { padding: 36px 18px; }
 }
+
+.final-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
