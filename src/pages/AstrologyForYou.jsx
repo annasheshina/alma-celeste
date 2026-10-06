@@ -6,6 +6,13 @@ import ReviewsBlock from '../components/ReviewsBlock'
 import { coursePage } from '../data/content'
 import heroImg from '../assets/program-course.jpg'
 import portrait from '../assets/portrait-anna.jpg'
+import astroImg from '../assets/course-astro.jpg'
+import weekImg1 from '../assets/course-week-1.jpg'
+import weekImg2 from '../assets/course-week-2.png'
+import weekImg3 from '../assets/course-week-3.jpg'
+import weekImg4 from '../assets/course-week-4.jpg'
+
+const WEEK_IMAGES = [weekImg1, weekImg2, weekImg3, weekImg4]
 
 export default function AstrologyForYou() {
   const c = coursePage
@@ -21,6 +28,15 @@ export default function AstrologyForYou() {
           </Button>
         </div>
       </PageHero>
+
+      {/* Иллюстрация */}
+      <section className="section tight">
+        <div className="container">
+          <div className="course-hero-art">
+            <img src={astroImg} alt="Астрологическая карта" />
+          </div>
+        </div>
+      </section>
 
       {/* Что даст курс */}
       <section className="section natal-intro">
@@ -70,22 +86,27 @@ export default function AstrologyForYou() {
       <section className="section tight" id="program">
         <div className="container">
           <SectionTitle index="02" title="Программа" note={c.moduleLabel} />
-          <div className="weeks-grid">
+          <div className="weeks-list">
             {c.weeks.map((w, i) => (
               <article className="week-card" key={w.title}>
-                <div className="guide-meta">
-                  <span className="guide-index">{String(i + 1).padStart(2, '0')}</span>
-                  <span className="week-num">{w.num}</span>
+                <div className="week-card-media">
+                  <img src={WEEK_IMAGES[i]} alt={w.title} />
                 </div>
-                <h3 className="week-title display">{w.title}</h3>
-                <p className="week-sub">{w.sub}</p>
-                <ul className="check-list">
-                  {w.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-                {w.result && <p className="week-result">{w.result}</p>}
-                {w.bonus && <p className="week-bonus">{w.bonus}</p>}
+                <div className="week-card-body">
+                  <div className="guide-meta">
+                    <span className="guide-index">{String(i + 1).padStart(2, '0')}</span>
+                    <span className="week-num">{w.num}</span>
+                  </div>
+                  <h3 className="week-title display">{w.title}</h3>
+                  <p className="week-sub">{w.sub}</p>
+                  <ul className="check-list">
+                    {w.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                  {w.result && <p className="week-result">{w.result}</p>}
+                  {w.bonus && <p className="week-bonus">{w.bonus}</p>}
+                </div>
               </article>
             ))}
           </div>
@@ -111,7 +132,7 @@ export default function AstrologyForYou() {
               ))}
             </ul>
             <div className="today-bonus">
-              <p className="today-bonus-label">Для тех, кто покупает сегодня</p>
+              <p className="today-bonus-label">Для тех, кто покупает на этой неделе</p>
               <p className="today-bonus-title">{c.todayBonus.title}</p>
               <p className="today-bonus-text">{c.todayBonus.text}</p>
             </div>
@@ -124,9 +145,9 @@ export default function AstrologyForYou() {
         <div className="container">
           <div className="price-block">
             <p className="guide-includes-label">Стоимость модуля</p>
-            <div className="price-row">
-              <span className="price-current display">{c.price}</span>
+            <div className="price-row price-row-col">
               <span className="price-old">{c.oldPrice}</span>
+              <span className="price-current display">{c.price}</span>
             </div>
             <Button to={'https://t.me/m/Vi3xeY9_YmEy'} variant="dark">
               {c.cta}
@@ -140,6 +161,11 @@ export default function AstrologyForYou() {
         <div className="container">
           <SectionTitle index="05" title="Отзывы моих клиентов и учеников" />
           <ReviewsBlock />
+          <div style={{ marginTop: 44 }}>
+            <Button to="/reviews#astrologiya" variant="dark">
+              Показать все отзывы
+            </Button>
+          </div>
         </div>
       </section>
 
