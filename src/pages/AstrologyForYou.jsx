@@ -7,6 +7,7 @@ import { coursePage } from '../data/content'
 import heroImg from '../assets/program-course.jpg'
 import portrait from '../assets/portrait-anna.jpg'
 import astroImg from '../assets/course-astro.jpg'
+import formatImg from '../assets/course-format.png'
 import weekImg1 from '../assets/course-week-1.jpg'
 import weekImg2 from '../assets/course-week-2.png'
 import weekImg3 from '../assets/course-week-3.jpg'
@@ -115,8 +116,13 @@ export default function AstrologyForYou() {
               ))}
             </ul>
           </div>
-          <div className="course-hero-art">
-            <img src={astroImg} alt="Астрология" />
+          <div className="course-format-art">
+            <div className="course-hero-art">
+              <img src={astroImg} alt="Астрология" />
+            </div>
+            <div className="course-hero-art">
+              <img src={formatImg} alt="Закрытый канал и чат курса" />
+            </div>
           </div>
         </div>
       </section>

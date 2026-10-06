@@ -3173,3 +3173,9 @@ a {
     padding: 30px 28px;
   }
 }
+
+.course-format-art {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
