@@ -34,6 +34,9 @@ export default function AstrologyForYou() {
       <section className="section natal-intro">
         <div className="container">
           <div className="natal-intro-inner">
+            <div className="course-hero-art" style={{ marginBottom: 36 }}>
+              <img src={astroImg} alt="Обучение астрологии" />
+            </div>
             <span className="natal-ornament" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
                 <path d="M12 3l1.6 6.4L20 11l-6.4 1.6L12 19l-1.6-6.4L4 11l6.4-1.6z" />
@@ -117,9 +120,6 @@ export default function AstrologyForYou() {
             </ul>
           </div>
           <div className="course-format-art">
-            <div className="course-hero-art">
-              <img src={astroImg} alt="Астрология" />
-            </div>
             <div className="course-hero-art">
               <img src={formatImg} alt="Закрытый канал и чат курса" />
             </div>
