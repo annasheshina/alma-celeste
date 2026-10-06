@@ -15,6 +15,6 @@ export const GIFTS = [
 ]
 
 export const DICE_PRIZES = [
-  { label: 'Личный разбор с Анной', note: 'Главный приз — разбор твоей натальной карты', url: 'https://t.me/anna_romannaa' },
-  ...GIFTS.slice(0, 5).map((g) => ({ label: g.title, note: g.tag + ' · напиши Анне в Telegram', url: 'https://t.me/anna_romannaa' })),
+  { label: 'Личный разбор с Анной', note: 'Главный приз — разбор твоей натальной карты', url: 'https://t.me/anna_romannaa/1914' },
+  ...GIFTS.slice(0, 5).map((g) => ({ label: g.title, note: g.tag + ' · напиши Анне в Telegram', url: 'https://t.me/anna_romannaa/1914' })),
 ]
