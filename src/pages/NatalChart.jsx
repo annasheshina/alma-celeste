@@ -90,7 +90,10 @@ export default function NatalChart() {
                   ))}
                 </ul>
                 <div className="guide-buy">
-                  <span className="guide-price">{g.price}</span>
+                  <span className="guide-price">
+                    {g.price}
+                    {g.priceNote && <span className="guide-price-note">{g.priceNote}</span>}
+                  </span>
                   <Button to={g.ctaUrl || TELEGRAM_URL} variant="dark">
                     {g.cta}
                   </Button>
