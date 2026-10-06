@@ -19,8 +19,15 @@ export default function Reviews() {
 
   useEffect(() => {
     if (!hash) return
-    const el = document.getElementById(hash.slice(1))
-    if (el) setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 200)
+    const id = hash.slice(1)
+    let tries = 0
+    const tick = () => {
+      const el = document.getElementById(id)
+      if (el) el.scrollIntoView({ behavior: tries === 0 ? 'instant' : 'smooth' })
+      if (tries++ < 8 && document.readyState !== 'complete') setTimeout(tick, 250)
+    }
+    const t = setTimeout(tick, 50)
+    return () => clearTimeout(t)
   }, [hash])
 
   const openAt = (secIdx, shotIdx) =>
