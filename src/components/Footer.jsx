@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { FOOTER_LINKS, LEGAL_DOCS, SOCIALS } from '../data/site'
 import Sparkle from './Sparkle'
+import BrandName from './BrandName'
 
 function SocialIcon({ id }) {
   if (id === 'instagram')
@@ -42,14 +43,11 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container">
         <div className="footer-top">
-          <Link to="/" className="brand" aria-label="ANNA IZI — ALMA CELESTE">
+          <Link to="/" className="brand" aria-label="АННА ИЗИ — ALMA CELESTE">
             <span className="brand-mark">
               <Sparkle size={14} />
             </span>
-            <span className="brand-name">
-              <strong>ANNA IZI</strong>
-              <span>Alma Celeste</span>
-            </span>
+            <BrandName />
           </Link>
           <nav className="footer-nav" aria-label="Меню в подвале">
             {FOOTER_LINKS.map((l) => (
@@ -81,7 +79,7 @@ export default function Footer() {
               </a>
             ))}
           </nav>
-          <span>© ANNA IZI · Alma Celeste</span>
+          <span>© АННА ИЗИ · Alma Celeste</span>
           <span>Астрология как путь к себе</span>
         </div>
       </div>

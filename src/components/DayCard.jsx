@@ -50,7 +50,7 @@ export default function DayCard() {
                   <span className="daycard-advice-label">Рекомендация</span>
                   <p className="daycard-advice-text">{card.advice}</p>
                 </div>
-                <span className="daycard-foot">ANNA IZI · карта обновляется каждый день</span>
+                <span className="daycard-foot">АННА ИЗИ · карта обновляется каждый день</span>
               </div>
             </div>
           </div>,

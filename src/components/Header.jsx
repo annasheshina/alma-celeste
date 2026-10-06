@@ -2,20 +2,18 @@ import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { NAV_LINKS, TELEGRAM_URL } from '../data/site'
 import Sparkle from './Sparkle'
+import BrandName from './BrandName'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
   return (
     <>
       <header className="site-header">
-        <Link to="/" className="brand" aria-label="ANNA IZI — ALMA CELESTE">
+        <Link to="/" className="brand" aria-label="АННА ИЗИ — ALMA CELESTE">
           <span className="brand-mark">
             <Sparkle size={14} />
           </span>
-          <span className="brand-name">
-            <strong>ANNA IZI</strong>
-            <span>Alma Celeste</span>
-          </span>
+          <BrandName />
         </Link>
         <nav className="main-nav" aria-label="Основное меню">
           {NAV_LINKS.map((l) => (
