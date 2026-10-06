@@ -22,9 +22,10 @@ export const SOCIALS = [
 ]
 
 export const LEGAL_DOCS = [
+  { href: '/docs/oferta.pdf', label: 'Публичная оферта' },
+  { href: '/docs/oferta-kurs.pdf', label: 'Оферта (курс)' },
+  { href: '/docs/politika-konfidencialnosti.pdf', label: 'Политика обработки ПД' },
   { href: '/docs/soglasie-pd.pdf', label: 'Согласие на обработку ПД' },
-  { href: '/docs/politika-konfidencialnosti.pdf', label: 'Политика конфиденциальности' },
-  { href: '/docs/oferta.pdf', label: 'Оферта' },
 ]
 
 export const STATS = [
