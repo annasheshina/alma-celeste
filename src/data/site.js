@@ -4,6 +4,7 @@ export const NAV_LINKS = [
   { to: '/personal-work', label: 'Личная работа' },
   { to: '/about', label: 'Обо мне' },
   { to: '/reviews', label: 'Отзывы' },
+  { to: '/#gifts', label: 'Подарки', end: true },
 ]
 
 export const FOOTER_LINKS = [

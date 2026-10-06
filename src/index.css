@@ -2920,6 +2920,7 @@ a {
 .gifts-section {
   background: linear-gradient(160deg, var(--ink-deep), #171210);
   color: var(--pearl);
+  scroll-margin-top: 90px;
 }
 
 .gifts-lead {

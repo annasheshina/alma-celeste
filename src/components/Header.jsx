@@ -19,7 +19,7 @@ export default function Header() {
         </Link>
         <nav className="main-nav" aria-label="Основное меню">
           {NAV_LINKS.map((l) => (
-            <NavLink key={l.to} to={l.to}>
+            <NavLink key={l.to} to={l.to} end={l.end}>
               {l.label}
             </NavLink>
           ))}
