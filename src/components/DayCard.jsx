@@ -37,12 +37,19 @@ export default function DayCard() {
             <button className="daycard-close" aria-label="Закрыть" onClick={() => setOpen(false)}>
               ×
             </button>
-            <span className="daycard-eyebrow">Карта дня · {today}</span>
-            <span className="daycard-symbol" aria-hidden="true">{card.symbol}</span>
-            <span className="daycard-divider" aria-hidden="true">✦</span>
-            <h3 className="daycard-title display">{card.title}</h3>
-            <p className="daycard-quote">{card.quote}</p>
-            <span className="daycard-foot">ANNA IZI · карта обновляется каждый день</span>
+            <div className="daycard-art">
+              <img src={card.img} alt={card.title} />
+            </div>
+            <div className="daycard-body">
+              <span className="daycard-eyebrow">Карта дня · {today}</span>
+              <h3 className="daycard-title display">{card.title}</h3>
+              <p className="daycard-message">{card.message}</p>
+              <div className="daycard-advice">
+                <span className="daycard-advice-label">Рекомендация</span>
+                <p className="daycard-advice-text">{card.advice}</p>
+              </div>
+              <span className="daycard-foot">ANNA IZI · карта обновляется каждый день</span>
+            </div>
           </div>
         </div>
       )}

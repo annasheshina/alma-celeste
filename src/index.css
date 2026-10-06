@@ -2824,23 +2824,14 @@ a {
 .daycard {
   position: relative;
   width: min(400px, 92vw);
-  padding: 56px 40px 34px;
-  text-align: center;
+  max-height: 92vh;
+  overflow: hidden auto;
   color: var(--cream);
-  background:
-    radial-gradient(circle at 50% 18%, rgba(169, 140, 102, 0.22), transparent 55%),
-    linear-gradient(165deg, #352c22 0%, #241d16 60%, #1c1712 100%);
+  background: linear-gradient(165deg, #352c22 0%, #241d16 60%, #1c1712 100%);
   border: 1px solid rgba(169, 140, 102, 0.55);
-  border-radius: 14px;
-  box-shadow:
-    0 30px 80px rgba(0, 0, 0, 0.5),
-    inset 0 0 0 8px rgba(242, 236, 223, 0.03),
-    inset 0 0 0 9px rgba(169, 140, 102, 0.18);
+  border-radius: 16px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
   animation: daycard-flip 0.65s cubic-bezier(0.2, 0.8, 0.3, 1.1) both;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
 }
 @keyframes daycard-fade { from { opacity: 0 } to { opacity: 1 } }
 @keyframes daycard-flip {
@@ -2849,50 +2840,75 @@ a {
 }
 .daycard-close {
   position: absolute;
-  top: 12px;
-  right: 16px;
-  background: none;
+  top: 10px;
+  right: 14px;
+  z-index: 2;
+  background: rgba(24, 19, 14, 0.5);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
   border: 0;
-  color: rgba(242, 236, 223, 0.55);
-  font-size: 28px;
+  color: rgba(242, 236, 223, 0.85);
+  font-size: 24px;
   line-height: 1;
   cursor: pointer;
   transition: color 0.2s;
 }
 .daycard-close:hover { color: var(--cream) }
+.daycard-art img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+.daycard-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 22px 30px 26px;
+  text-align: center;
+  border-top: 1px solid rgba(169, 140, 102, 0.35);
+}
 .daycard-eyebrow {
   font-size: 11px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: rgba(242, 236, 223, 0.55);
 }
-.daycard-symbol {
-  font-size: 56px;
-  line-height: 1;
-  color: var(--gold);
-  text-shadow: 0 0 24px rgba(169, 140, 102, 0.6);
-  margin-top: 6px;
-}
-.daycard-divider {
-  font-size: 13px;
-  color: rgba(169, 140, 102, 0.8);
-  letter-spacing: 0.5em;
-  padding-left: 0.5em;
-}
 .daycard-title {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 500;
   margin: 0;
 }
-.daycard-quote {
+.daycard-message {
   font-size: 16px;
-  line-height: 1.65;
+  line-height: 1.6;
+  color: rgba(242, 236, 223, 0.88);
+  max-width: 310px;
+  margin: 0;
+}
+.daycard-advice {
+  border: 1px solid rgba(169, 140, 102, 0.35);
+  border-radius: 10px;
+  padding: 14px 18px;
+  background: rgba(169, 140, 102, 0.08);
+}
+.daycard-advice-label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+.daycard-advice-text {
+  font-size: 14px;
+  line-height: 1.6;
   color: rgba(242, 236, 223, 0.85);
-  max-width: 300px;
   margin: 0;
 }
 .daycard-foot {
-  margin-top: 14px;
   font-size: 10px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
