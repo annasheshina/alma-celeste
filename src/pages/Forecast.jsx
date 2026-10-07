@@ -4,7 +4,6 @@ import SectionTitle from '../components/SectionTitle'
 import Button from '../components/Button'
 import { forecastGuides, forecastSteps } from '../data/products'
 import { TELEGRAM_URL } from '../data/site'
-import heroBg from '../assets/band-mountains.jpg'
 
 const STEP_ICONS = [
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.1" key="1">
@@ -42,7 +41,6 @@ export default function Forecast() {
   return (
     <>
       <PageHero
-        image={heroBg}
         breadcrumb="Прогноз · Соляр"
         title={'Твой новый год\nначинается здесь.'}
         subtitle="Узнай главную тему своего года, почувствуй его направление и получи ориентиры, которые помогут использовать его возможности."

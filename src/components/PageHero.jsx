@@ -10,12 +10,14 @@ export default function PageHero({
 }) {
   return (
     <section className="page-hero">
-      <img
-        className="band-bg"
-        src={image}
-        alt=""
-        style={imagePosition ? { objectPosition: imagePosition } : undefined}
-      />
+      {image ? (
+        <img
+          className="band-bg"
+          src={image}
+          alt=""
+          style={imagePosition ? { objectPosition: imagePosition } : undefined}
+        />
+      ) : null}
       <div className="band-veil" />
       <Header />
       <div className="container">

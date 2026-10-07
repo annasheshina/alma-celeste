@@ -10,7 +10,6 @@ export default function Astrology() {
   return (
     <>
       <PageHero
-        image={bandBg}
         title="Астрология"
         subtitle="Инструмент, который помогает лучше понять себя, свои циклы и направления, увидеть возможности и принимать решения осознанно."
       />

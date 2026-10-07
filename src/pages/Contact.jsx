@@ -2,14 +2,12 @@ import PageHero from '../components/PageHero'
 import Footer from '../components/Footer'
 import Button from '../components/Button'
 import { SOCIALS } from '../data/site'
-import bandBg from '../assets/band-mountains.jpg'
 
 export default function Contact() {
   const telegram = SOCIALS.find((s) => s.id === 'telegram')
   return (
     <>
       <PageHero
-        image={bandBg}
         title="Контакты"
         subtitle="Расскажите, что сейчас происходит в вашей жизни — я помогу определить подходящий формат работы и отвечу на вопросы."
       />

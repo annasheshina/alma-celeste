@@ -4,13 +4,11 @@ import SectionTitle from '../components/SectionTitle'
 import Button from '../components/Button'
 import CTASection from '../components/CTASection'
 import { consultationSteps } from '../data/content'
-import bandBg from '../assets/band-mountains.jpg'
 
 export default function Consultation() {
   return (
     <>
       <PageHero
-        image={bandBg}
         breadcrumb="Астрология · Консультация"
         title="Личная консультация"
         subtitle="Это не просто часовой звонок, а комплексный формат: от определения запроса до сопровождения после встречи."

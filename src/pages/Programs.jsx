@@ -4,13 +4,11 @@ import SectionTitle from '../components/SectionTitle'
 import ProgramCard from '../components/ProgramCard'
 import CTASection from '../components/CTASection'
 import { programs, deepFormat } from '../data/content'
-import bandBg from '../assets/band-mountains.jpg'
 
 export default function Programs() {
   return (
     <>
       <PageHero
-        image={bandBg}
         title="Программы"
         subtitle="Глубокие программы, которые соединяют астрологию, психологию и практики для реальных изменений."
       />

@@ -5,7 +5,6 @@ import CTASection from '../components/CTASection'
 import SectionTitle from '../components/SectionTitle'
 import Button from '../components/Button'
 import { aboutPage as d } from '../data/content'
-import heroImg from '../assets/band-mountains.jpg'
 import portrait from '../assets/anna-2.jpg'
 import portrait2 from '../assets/anna-3.jpg'
 import casePhoto from '../assets/about-case.jpg'
@@ -17,7 +16,7 @@ const PROG_IMAGES = [progVenus, progAfy]
 export default function About() {
   return (
     <>
-      <PageHero image={heroImg} title={d.heroTitle} subtitle={d.heroSubtitle} />
+      <PageHero title={d.heroTitle} subtitle={d.heroSubtitle} />
 
       {/* ---------- кто такая Анна ---------- */}
       <section className="section">

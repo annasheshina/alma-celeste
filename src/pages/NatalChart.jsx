@@ -4,7 +4,6 @@ import SectionTitle from '../components/SectionTitle'
 import Button from '../components/Button'
 import { guideJournals, guideSteps } from '../data/products'
 import { TELEGRAM_URL } from '../data/site'
-import bandBg from '../assets/band-mountains.jpg'
 
 const STEP_ICONS = [
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.1" key="1">
@@ -33,7 +32,6 @@ export default function NatalChart() {
   return (
     <>
       <PageHero
-        image={bandBg}
         breadcrumb="Продукты · Натальная карта"
         title="Натальная карта"
         subtitle="Твоя карта — это не просто описание тебя, а ключ к более осознанной, наполненной и гармоничной жизни."

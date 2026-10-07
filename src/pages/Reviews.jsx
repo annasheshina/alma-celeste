@@ -7,7 +7,6 @@ import CTASection from '../components/CTASection'
 import SectionTitle from '../components/SectionTitle'
 import { SHOT_SECTIONS } from '../data/reviews'
 import Button from '../components/Button'
-import bandBg from '../assets/band-mountains.jpg'
 
 const FLAT = SHOT_SECTIONS.flatMap((sec) =>
   sec.shots.map((src) => ({ src, tag: sec.label }))
@@ -41,7 +40,6 @@ export default function Reviews() {
   return (
     <>
       <PageHero
-        image={bandBg}
         title="Отзывы"
         subtitle="Реальные истории и результаты людей, с которыми мы работали."
       />

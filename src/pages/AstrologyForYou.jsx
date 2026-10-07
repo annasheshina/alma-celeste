@@ -4,7 +4,6 @@ import SectionTitle from '../components/SectionTitle'
 import Button from '../components/Button'
 import ReviewsBlock from '../components/ReviewsBlock'
 import { coursePage } from '../data/content'
-import heroImg from '../assets/program-course.jpg'
 import portrait from '../assets/portrait-anna.jpg'
 import astroImg from '../assets/course-astro.jpg'
 import formatImg from '../assets/course-format.png'
@@ -19,7 +18,7 @@ export default function AstrologyForYou() {
   const c = coursePage
   return (
     <>
-      <PageHero image={heroImg} breadcrumb="Программы · Курс" title={c.heroTitle} subtitle={c.heroSub}>
+      <PageHero breadcrumb="Программы · Курс" title={c.heroTitle} subtitle={c.heroSub}>
         <p className="hero-role" style={{ maxWidth: 'none' }}>
           {c.heroBadge}
         </p>

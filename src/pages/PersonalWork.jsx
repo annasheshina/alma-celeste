@@ -4,7 +4,6 @@ import SectionTitle from '../components/SectionTitle'
 import Button from '../components/Button'
 import CTASection from '../components/CTASection'
 import { TELEGRAM_URL } from '../data/site'
-import heroImg from '../assets/deep-work.jpg'
 
 const suitable = [
   'Тема повторяется и не решается «в лоб» — нужен глубокий взгляд',
@@ -22,7 +21,6 @@ export default function PersonalWork() {
   return (
     <>
       <PageHero
-        image={heroImg}
         breadcrumb="Форматы"
         title="Личная работа"
         subtitle="Самый глубокий формат взаимодействия со мной: индивидуальное сопровождение с использованием астрологии, психологии и практик глубокой работы."

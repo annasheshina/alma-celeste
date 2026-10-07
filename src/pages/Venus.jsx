@@ -6,7 +6,6 @@ import CTASection from '../components/CTASection'
 import ReviewCard from '../components/ReviewCard'
 import { venusPage } from '../data/content'
 import { reviews } from '../data/reviews'
-import heroImg from '../assets/program-venus.jpg'
 import illRelease from '../assets/ill-release.jpg'
 import illGoddess from '../assets/ill-goddess.jpg'
 import illCircle from '../assets/ill-circle.jpg'
@@ -20,7 +19,6 @@ export default function Venus() {
   return (
     <>
       <PageHero
-        image={heroImg}
         breadcrumb="Программы"
         title={venusPage.heroTitle}
         subtitle={venusPage.heroSub}
